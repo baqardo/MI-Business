@@ -1,11 +1,12 @@
 @use 'sass:color';
 
 $large-bp: 910px;
-$medium-bp: 600px;
+$medium-bp: 660px;
 $small-bp: 414px;
 
 .o-navigation {
-  margin: 40px clamp(20px, 3.5vw, 80px);
+  margin: 0 clamp(20px, 3.5vw, 80px);
+  padding: 40px 0;
   display: flex;
 
   text-transform: uppercase;
@@ -13,17 +14,18 @@ $small-bp: 414px;
   @media screen and (max-width: $large-bp) {
     flex-wrap: wrap;
 
-    margin-top: 20px;
+    padding: 20px 0;
   }
 
   @media screen and (max-width: $small-bp) {
     flex-wrap: nowrap;
 
     margin: 0 15px;
-    margin-top: 20px;
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
     margin-right: clamp(10px, 2vw, 40px);
 
     @media screen and (max-width: $large-bp) {
@@ -62,7 +64,7 @@ $small-bp: 414px;
         margin-top: 10px;
 
         padding-top: 15px;
-        border-top: 1px solid rgba($color-nav-border, 0.3);
+        border-top: 1px solid rgba($color-nav-border, 0.2);
       }
 
       @media screen and (max-width: $small-bp) {
@@ -84,13 +86,20 @@ $small-bp: 414px;
     font-weight: bold;
     letter-spacing: 3px;
 
+    transition: all 0.4s;
+
     &:hover:not(&--active) {
-      transition: color 0.2s;
-      color: color.adjust($color-link, $lightness: -20%);
+      color: color.adjust($color-link, $lightness: -10%);
     }
 
     &:not(:first-of-type) {
       margin-left: clamp(15px, 3vw, 80px);
+    }
+
+    @media screen and (max-width: $small-bp) {
+      &:not(&--blue) {
+        display: none;
+      }
     }
 
     &--active {
@@ -101,15 +110,39 @@ $small-bp: 414px;
       }
     }
 
-    &--blue {
-      color: $color-link;
+    &--login {
+      padding: clamp(8px, 1.3vw, 11px) clamp(11px, 1.3vw, 15px);
+      border: 1px solid rgba(black, 0.3);
+
+      &:hover {
+        border: 1px solid color.adjust($color-nav-burger-hover, $lightness: -10%, $alpha: -0.4);
+        cursor: pointer;
+      }
+    }
+
+    &--register {
+      padding: clamp(8px, 1.3vw, 11px) clamp(11px, 1.3vw, 15px);
+      color: white;
+      background-color: $color-blue;
+
+      &:hover {
+        color: white !important;
+        background-color: color.adjust($color-nav-burger-hover, $lightness: -20%);
+        cursor: pointer;
+      }
     }
   }
 
   &__burger {
     display: none;
 
-    margin-left: 10px;
+    width: 30px;
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-left: 20px;
 
     @media screen and (max-width: $small-bp) {
       order: 3;
@@ -117,20 +150,172 @@ $small-bp: 414px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: flex-end;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
 
     &:hover &-line {
-      background-color: color.adjust($color-nav-burger-hover, $lightness: -20%);
+      background-color: color.adjust($color-nav-burger-hover, $lightness: -10%);
+    }
+
+    &:hover &-line:nth-of-type(2) {
+      margin: 4px 0;
+    }
+
+    &-show {
+      display: none;
+    }
+
+    &-show:checked ~ .o-navigation__backdrop {
+      opacity: 1;
+    }
+
+    &-show:checked ~ &-mobile {
+      right: 0;
+    }
+
+    &-show:checked ~ & &-line:nth-of-type(2) {
+      opacity: 0;
+      margin: 3px 0;
+    }
+
+    &-show:checked ~ & &-line:nth-of-type(1) {
+      transform: rotate(225deg) translateY(-10px);
+    }
+
+    &-show:checked ~ & &-line:nth-of-type(3) {
+      transform: rotate(-225deg) translateY(10px);
+    }
+
+    &-mobile {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: -100vw;
+      width: 100vw;
+      height: 100vh;
+
+      background-color: $color-nav-burger-mobile;
+
+      transition: right 0.3s ease-in-out;
+
+      overflow: auto;
+
+      @media screen and (max-width: $small-bp) {
+        display: block;
+      }
+
+      &-nav {
+        width: 100vw;
+        height: 66px;
+
+        border-bottom: 1px solid rgba($color-nav-border, 0.2);
+      }
+
+      &-link {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 3px;
+
+        transition: all 0.4s;
+
+        &-container {
+          margin: 40px 0;
+        }
+
+        &-container > &-wrapper {
+          border-bottom: none;
+        }
+
+        &-wrapper {
+          margin: 0 40px;
+          padding: 20px 0;
+          border-bottom: 1px solid rgba($color-nav-border, 0.2);
+
+          &--active {
+            color: $color-link;
+
+            &:hover a {
+              cursor: default;
+            }
+          }
+
+          &:hover:not(&--active) {
+            color: color.adjust($color-link, $lightness: -10%);
+            cursor: pointer;
+          }
+        }
+
+        &--login {
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 3px;
+          display: block;
+          width: 100%;
+          text-align: center;
+          transition: all 0.4s;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &--register {
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 3px;
+          display: block;
+          width: 100%;
+          text-align: center;
+          color: white;
+          background-color: $color-blue;
+
+          transition: all 0.4s;
+
+          padding: 10px 0;
+
+          &:hover {
+            color: white !important;
+            background-color: color.adjust($color-nav-burger-hover, $lightness: -20%);
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     &-line {
-      width: 20px;
-      height: 3px;
+      width: 25px;
+      height: 4px;
       background-color: $color-nav-burger;
 
-      &:not(:first-of-type) {
-        margin-top: 3px;
+      border-radius: 10px;
+      transition: transform 0.4s ease-in-out, opacity 0.2s;
+
+      &:nth-of-type(2) {
+        margin: 3px 0;
       }
+    }
+  }
+
+  &__backdrop {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-nav-backdrop;
+
+    transition: opacity 0.6s;
+
+    @media screen and (max-width: $small-bp) {
+      display: block;
     }
   }
 }

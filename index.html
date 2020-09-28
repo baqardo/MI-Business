@@ -37,18 +37,58 @@
           </ul>
 
           <ul class="o-navigation__list o-navigation__list--right">
-            <li class="o-navigation__link">
+            <li class="o-navigation__link o-navigation__link--login">
               <a href="#">Sign In</a>
             </li>
-            <li class="o-navigation__link o-navigation__link--blue">
+            <li class="o-navigation__link o-navigation__link--register">
               <a href="#">Sign Up</a>
             </li>
           </ul>
 
-          <div class="o-navigation__burger">
+          <input type="checkbox" id="burger-show" class="o-navigation__burger-show" />
+          <label for="burger-show" class="o-navigation__burger">
             <div class="o-navigation__burger-line"></div>
             <div class="o-navigation__burger-line"></div>
             <div class="o-navigation__burger-line"></div>
+          </label>
+
+          <div class="o-navigation__backdrop"></div>
+
+          <div class="o-navigation__burger-mobile">
+            <div class="o-navigation__burger-mobile-nav"></div>
+
+            <div class="o-navigation__burger-mobile-link-wrapper o-navigation__burger-mobile-link-wrapper--active">
+              <a href="#" class="o-navigation__burger-mobile-link">Home</a>
+            </div>
+
+            <div class="o-navigation__burger-mobile-link-wrapper">
+              <a href="#" class="o-navigation__burger-mobile-link">Intro</a>
+            </div>
+
+            <div class="o-navigation__burger-mobile-link-wrapper">
+              <a href="#" class="o-navigation__burger-mobile-link">Expertise</a>
+            </div>
+
+            <div class="o-navigation__burger-mobile-link-wrapper">
+              <a href="#" class="o-navigation__burger-mobile-link">Work</a>
+            </div>
+
+            <div class="o-navigation__burger-mobile-link-wrapper">
+              <a href="#" class="o-navigation__burger-mobile-link">Plans</a>
+            </div>
+
+            <div class="o-navigation__burger-mobile-link-wrapper">
+              <a href="#" class="o-navigation__burger-mobile-link">News</a>
+            </div>
+
+            <div class="o-navigation__burger-mobile-link-container">
+              <div class="o-navigation__burger-mobile-link-wrapper">
+                <a href="#" class="o-navigation__burger-mobile-link--register">Sign Up</a>
+              </div>
+              <div class="o-navigation__burger-mobile-link-wrapper">
+                <a href="#" class="o-navigation__burger-mobile-link--login">Sign In</a>
+              </div>
+            </div>
           </div>
         </nav>
       </section>

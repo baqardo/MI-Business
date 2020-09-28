@@ -1,5 +1,6 @@
 @use 'sass:map';
 
+$color-white: #fff;
 $color-black: #0f1120;
 $color-blue: #1268fe;
 $color-dark-blue: #0f1120;
@@ -8,3 +9,5 @@ $color-link: $color-blue;
 $color-nav-border: $color-black;
 $color-nav-burger: $color-black;
 $color-nav-burger-hover: $color-blue;
+$color-nav-burger-mobile: $color-white;
+$color-nav-backdrop: rgba($color-black, 0.3);
