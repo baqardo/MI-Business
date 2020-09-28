@@ -1,0 +1,97 @@
+@use 'sass:color';
+
+$large-bp: 910px;
+$medium-bp: 600px;
+$small-bp: 414px;
+
+.o-navigation {
+  margin: 40px clamp(20px, 3.5vw, 80px);
+  display: flex;
+
+  text-transform: uppercase;
+
+  @media screen and (max-width: $large-bp) {
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+  }
+
+  &__logo {
+    margin-right: clamp(10px, 2vw, 40px);
+
+    @media screen and (max-width: $large-bp) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      text-align: center;
+    }
+
+    @media screen and (max-width: $medium-bp) {
+      width: 30%;
+
+      margin: 0;
+
+      text-align: start;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+
+    &--left {
+      margin-right: 20px;
+
+      @media screen and (max-width: $medium-bp) {
+        order: 2;
+        width: 100%;
+
+        justify-content: space-between;
+
+        margin: 0;
+        margin-top: 10px;
+
+        padding-top: 15px;
+        border-top: 1px solid rgba($color-nav-border, 0.3);
+      }
+    }
+
+    &--right {
+      margin-left: auto;
+
+      @media screen and (max-width: $medium-bp) {
+        order: 1;
+      }
+    }
+  }
+
+  &__link {
+    font-size: clamp(12px, 1.3vw, 18px);
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    &:hover:not(&--active) {
+      transition: color 0.2s;
+      color: color.adjust($color-link, $lightness: -20%);
+    }
+
+    &:not(:first-of-type) {
+      margin-left: clamp(15px, 3vw, 80px);
+    }
+
+    &--active {
+      color: $color-link;
+
+      & a:hover {
+        cursor: default;
+      }
+    }
+
+    &--blue {
+      color: $color-link;
+    }
+  }
+}

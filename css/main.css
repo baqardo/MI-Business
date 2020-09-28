@@ -1,0 +1,173 @@
+p,
+a,
+button {
+  font-family: Dosis;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+ * 1. Remove paddings from all elements
+ * 2. Remove margin from all elements
+*/
+* {
+  padding: 0;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button {
+  border: none;
+  background: none;
+}
+button:hover {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.o-navigation {
+  margin: 40px clamp(20px, 3.5vw, 80px);
+  display: flex;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 910px) {
+  .o-navigation {
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+}
+.o-navigation__logo {
+  margin-right: clamp(10px, 2vw, 40px);
+}
+@media screen and (max-width: 910px) {
+  .o-navigation__logo {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .o-navigation__logo {
+    width: 30%;
+    margin: 0;
+    text-align: start;
+  }
+}
+.o-navigation__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.o-navigation__list--left {
+  margin-right: 20px;
+}
+@media screen and (max-width: 600px) {
+  .o-navigation__list--left {
+    order: 2;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(15, 17, 32, 0.3);
+  }
+}
+.o-navigation__list--right {
+  margin-left: auto;
+}
+@media screen and (max-width: 600px) {
+  .o-navigation__list--right {
+    order: 1;
+  }
+}
+.o-navigation__link {
+  font-size: clamp(12px, 1.3vw, 18px);
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.o-navigation__link:hover:not(.o-navigation__link--active) {
+  transition: color 0.2s;
+  color: #013ea9;
+}
+.o-navigation__link:not(:first-of-type) {
+  margin-left: clamp(15px, 3vw, 80px);
+}
+.o-navigation__link--active {
+  color: #1268fe;
+}
+.o-navigation__link--active a:hover {
+  cursor: default;
+}
+.o-navigation__link--blue {
+  color: #1268fe;
+}
+
+.o-logo {
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: bold;
+  letter-spacing: -0.62px;
+}
+
+/*# sourceMappingURL=main.css.map */
