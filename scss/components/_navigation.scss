@@ -16,6 +16,13 @@ $small-bp: 414px;
     margin-top: 20px;
   }
 
+  @media screen and (max-width: $small-bp) {
+    flex-wrap: nowrap;
+
+    margin: 0 15px;
+    margin-top: 20px;
+  }
+
   &__logo {
     margin-right: clamp(10px, 2vw, 40px);
 
@@ -28,7 +35,7 @@ $small-bp: 414px;
     }
 
     @media screen and (max-width: $medium-bp) {
-      width: 30%;
+      width: 40%;
 
       margin: 0;
 
@@ -56,6 +63,10 @@ $small-bp: 414px;
 
         padding-top: 15px;
         border-top: 1px solid rgba($color-nav-border, 0.3);
+      }
+
+      @media screen and (max-width: $small-bp) {
+        display: none;
       }
     }
 
@@ -92,6 +103,34 @@ $small-bp: 414px;
 
     &--blue {
       color: $color-link;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    margin-left: 10px;
+
+    @media screen and (max-width: $small-bp) {
+      order: 3;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &:hover &-line {
+      background-color: color.adjust($color-nav-burger-hover, $lightness: -20%);
+    }
+
+    &-line {
+      width: 20px;
+      height: 3px;
+      background-color: $color-nav-burger;
+
+      &:not(:first-of-type) {
+        margin-top: 3px;
+      }
     }
   }
 }
