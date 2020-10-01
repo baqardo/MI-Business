@@ -1,7 +1,7 @@
 .o-logo {
-  font-size: clamp(22px, 2.2vw, 28px);
-  font-weight: bold;
-  letter-spacing: -0.62px;
+  &--skin {
+    @include font($size: clamp(24px, 2.4vw, 32px), $weight: bold, $l-spacing: -0.62px);
+  }
 
   &__wrapper {
   }

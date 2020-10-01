@@ -1,0 +1,49 @@
+#{$nav-class-name}__burger {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include z-index(nav-burger);
+
+  &:hover &-line {
+    background-color: f_color(main, primary-dark);
+  }
+
+  &-line {
+    transition: all 0.4s ease-in-out, opacity 0.2s;
+
+    width: 25px;
+    height: 4px;
+    &:nth-of-type(2) {
+      margin: 3px 0;
+    }
+
+    &--skin {
+      border-radius: 10px;
+      background-color: f_color(main, secondary);
+    }
+  }
+
+  &-toggler {
+    display: none;
+  }
+
+  &-toggler:checked ~ & &-line:nth-of-type(2) {
+    opacity: 0;
+  }
+  &-toggler:checked ~ & &-line:nth-of-type(1) {
+    transform: rotate(225deg) translateY(-5px) translateX(-5px);
+  }
+  &-toggler:checked ~ & &-line:nth-of-type(3) {
+    transform: rotate(-225deg) translateY(5px) translateX(-5px);
+  }
+}
+
+#{$nav-class-name}__burger-toggler:checked ~ #{$nav-class-name}-mobile {
+  right: 0;
+}
+
+#{$nav-class-name}__burger-toggler:checked ~ #{$nav-class-name}__backdrop {
+  opacity: 1;
+}

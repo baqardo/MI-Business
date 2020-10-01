@@ -1,0 +1,20 @@
+#{$nav-class-name}__logo {
+  margin-right: clamp(30px, 6vw, 150px);
+
+  @include respond($large-bp) {
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    width: 100%;
+  }
+
+  @include respond($medium-bp) {
+    margin: 0;
+
+    width: max-content;
+  }
+
+  @include respond($small-bp) {
+    width: max-content;
+  }
+}

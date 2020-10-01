@@ -1,0 +1,23 @@
+@use 'sass:color';
+@use 'sass:map';
+
+@function f_z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@function f_get-deep-map($map, $global, $key) {
+  $value: $map;
+
+  @each $element in ($global, $key) {
+    $value: map-get($value, $element);
+  }
+
+  @return $value;
+}
+
+@function f_color($global, $key, $alpha: 1) {
+  $value: f_get-deep-map($colors, $global, $key);
+  $value: color.change($value, $alpha: $alpha);
+
+  @return $value;
+}

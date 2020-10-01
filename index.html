@@ -1,3 +1,5 @@
+<!DOCTYPE html5>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,102 +9,113 @@
   </head>
   <body>
     <div class="l-page">
-      <section class="l-page-header">
-        <nav class="o-navigation">
-          <div class="o-navigation__logo">
-            <div class="o-logo__wrapper">
-              <p class="o-logo">Mi Business</p>
+      <header class="l-page-header">
+        <nav class="o-nav o-nav--skin">
+          <div class="o-nav__logo">
+            <div class="o-logo-wrapper">
+              <p class="o-logo o-logo--skin">Mi Business</p>
             </div>
           </div>
 
-          <ul class="o-navigation__list o-navigation__list--left">
-            <li class="o-navigation__link o-navigation__link--active">
-              <a href="#">Home</a>
+          <ul class="o-nav__link-container o-nav__link-container--pages">
+            <li class="o-nav__link-wrapper">
+              <a href="#" class="o-nav__link o-nav__link--skin o-nav__link--active">Home</a>
             </li>
-            <li class="o-navigation__link">
-              <a href="#">Intro</a>
+            <li class="o-nav__link-wrapper">
+              <a href="#" class="o-nav__link o-nav__link--skin">Intro</a>
             </li>
-            <li class="o-navigation__link">
-              <a href="#">Expertise</a>
+            <li class="o-nav__link-wrapper">
+              <a href="#" class="o-nav__link o-nav__link--skin">Expertise</a>
             </li>
-            <li class="o-navigation__link">
-              <a href="#">Work</a>
+            <li class="o-nav__link-wrapper">
+              <a href="#" class="o-nav__link o-nav__link--skin">Work</a>
             </li>
-            <li class="o-navigation__link">
-              <a href="#">Plans</a>
+            <li class="o-nav__link-wrapper">
+              <a href="#" class="o-nav__link o-nav__link--skin">Plans</a>
             </li>
-            <li class="o-navigation__link">
-              <a href="#">News</a>
-            </li>
-          </ul>
-
-          <ul class="o-navigation__list o-navigation__list--right">
-            <li class="o-navigation__link o-navigation__link--login">
-              <a href="#">Sign In</a>
-            </li>
-            <li class="o-navigation__link o-navigation__link--register">
-              <a href="#">Sign Up</a>
+            <li class="o-nav__link-wrapper">
+              <a href="#" class="o-nav__link o-nav__link--skin">News</a>
             </li>
           </ul>
 
-          <input type="checkbox" id="burger-show" class="o-navigation__burger-show" />
-          <label for="burger-show" class="o-navigation__burger">
-            <div class="o-navigation__burger-line"></div>
-            <div class="o-navigation__burger-line"></div>
-            <div class="o-navigation__burger-line"></div>
-          </label>
+          <ul class="o-nav__link-container o-nav__link-container--user-connect">
+            <li class="o-nav__link-wrapper o-nav__link-wrapper--login">
+              <a href="#" class="o-nav__link o-nav__link--skin o-nav__link--button o-nav__link--login">Sign In</a>
+            </li>
+            <li class="o-nav__link-wrapper">
+              <a href="#" class="o-nav__link o-nav__link--skin o-nav__link--button o-nav__link--register">Sign Up</a>
+            </li>
+          </ul>
 
-          <div class="o-navigation__backdrop"></div>
+          <div class="o-nav-mobile-container">
+            <input type="checkbox" id="burger-toggler" class="o-nav__burger-toggler" />
+            <label for="burger-toggler" class="o-nav__burger">
+              <span class="o-nav__burger-line o-nav__burger-line--skin"></span>
+              <span class="o-nav__burger-line o-nav__burger-line--skin"></span>
+              <span class="o-nav__burger-line o-nav__burger-line--skin"></span>
+            </label>
 
-          <div class="o-navigation__burger-mobile">
-            <div class="o-navigation__burger-mobile-nav"></div>
+            <div class="o-nav-mobile o-nav-mobile--skin">
+              <div class="o-nav-mobile__menu o-nav-mobile__menu--skin"></div>
+              <div class="o-nav-mobile__menu-spacer"></div>
 
-            <div class="o-navigation__burger-mobile-link-wrapper o-navigation__burger-mobile-link-wrapper--active">
-              <a href="#" class="o-navigation__burger-mobile-link">Home</a>
+              <ul class="o-nav__link-container">
+                <li class="o-nav__link-wrapper o-nav__link-wrapper--skin">
+                  <a href="#" class="o-nav__link o-nav__link--skin o-nav__link--active">Home</a>
+                </li>
+                <li class="o-nav__link-wrapper o-nav__link-wrapper--skin">
+                  <a href="#" class="o-nav__link o-nav__link--skin">Intro</a>
+                </li>
+                <li class="o-nav__link-wrapper o-nav__link-wrapper--skin">
+                  <a href="#" class="o-nav__link o-nav__link--skin">Expertise</a>
+                </li>
+                <li class="o-nav__link-wrapper o-nav__link-wrapper--skin">
+                  <a href="#" class="o-nav__link o-nav__link--skin">Work</a>
+                </li>
+                <li class="o-nav__link-wrapper o-nav__link-wrapper--skin">
+                  <a href="#" class="o-nav__link o-nav__link--skin">Plans</a>
+                </li>
+                <li class="o-nav__link-wrapper o-nav__link-wrapper--skin">
+                  <a href="#" class="o-nav__link o-nav__link--skin">News</a>
+                </li>
+              </ul>
+
+              <ul class="o-nav__link-container">
+                <li class="o-nav__link-wrapper">
+                  <a href="#" class="o-nav__link o-nav__link--skin o-nav__link--button o-nav__link--register">
+                    Sign Up
+                  </a>
+                </li>
+                <li class="o-nav__link-wrapper">
+                  <a href="#" class="o-nav__link o-nav__link--skin o-nav__link--button o-nav__link--login"> Sign In </a>
+                </li>
+              </ul>
             </div>
-
-            <div class="o-navigation__burger-mobile-link-wrapper">
-              <a href="#" class="o-navigation__burger-mobile-link">Intro</a>
-            </div>
-
-            <div class="o-navigation__burger-mobile-link-wrapper">
-              <a href="#" class="o-navigation__burger-mobile-link">Expertise</a>
-            </div>
-
-            <div class="o-navigation__burger-mobile-link-wrapper">
-              <a href="#" class="o-navigation__burger-mobile-link">Work</a>
-            </div>
-
-            <div class="o-navigation__burger-mobile-link-wrapper">
-              <a href="#" class="o-navigation__burger-mobile-link">Plans</a>
-            </div>
-
-            <div class="o-navigation__burger-mobile-link-wrapper">
-              <a href="#" class="o-navigation__burger-mobile-link">News</a>
-            </div>
-
-            <div class="o-navigation__burger-mobile-link-container">
-              <div class="o-navigation__burger-mobile-link-wrapper">
-                <a href="#" class="o-navigation__burger-mobile-link--register">Sign Up</a>
-              </div>
-              <div class="o-navigation__burger-mobile-link-wrapper">
-                <a href="#" class="o-navigation__burger-mobile-link--login">Sign In</a>
-              </div>
-            </div>
+            <div class="o-nav__backdrop o-nav__backdrop--skin"></div>
           </div>
         </nav>
-      </section>
-      <section class="l-page-intro"></section>
-      <section class="l-page-expertise"></section>
-      <section class="l-page-services"></section>
-      <section class="l-page-portfolio"></section>
-      <section class="l-page-testimonial"></section>
-      <section class="l-page-pricing"></section>
-      <section class="l-page-create"></section>
-      <section class="l-page-blog"></section>
-      <section class="l-page-contact"></section>
-      <section class="l-page-cta"></section>
-      <section class="l-page-footer"></section>
+
+        <div class="social-media-container">
+          <div class="social-media-wrapper">
+            <svg class="social-media__icon">
+              s
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </div>
+          <div class="social-media-wrapper">
+            <svg class="social-media__icon">
+              s
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </div>
+          <div class="social-media-wrapper">
+            <svg class="social-media__icon">
+              s
+              <use xlink:href="#instagram"></use>
+            </svg>
+          </div>
+        </div>
+      </header>
     </div>
   </body>
 </html>

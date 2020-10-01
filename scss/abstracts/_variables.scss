@@ -1,13 +1,29 @@
 @use 'sass:map';
+@use 'sass:color';
 
 $color-white: #fff;
 $color-black: #0f1120;
 $color-blue: #1268fe;
 $color-dark-blue: #0f1120;
 
-$color-link: $color-blue;
-$color-nav-border: $color-black;
-$color-nav-burger: $color-black;
-$color-nav-burger-hover: $color-blue;
-$color-nav-burger-mobile: $color-white;
-$color-nav-backdrop: rgba($color-black, 0.3);
+$z-index: (
+  nav-burger: 20,
+  nav-backdrop: -10,
+);
+
+$colors: (
+  main: (
+    primary: $color-blue,
+    primary-dark: color.adjust($color-blue, $lightness: -10%),
+    primary-darker: color.adjust($color-blue, $lightness: -20%),
+    secondary: $color-black,
+    secondary-light: color.adjust($color-blue, $lightness: 10%),
+    tertiary: $color-white,
+  ),
+  font: (
+    primary: $color-blue,
+    primary-dark: color.adjust($color-blue, $lightness: -10%),
+    secondary: $color-black,
+    tertiary: $color-white,
+  ),
+);

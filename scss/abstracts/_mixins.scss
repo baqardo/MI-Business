@@ -1,0 +1,53 @@
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin font(
+  $family: false,
+  $size: false,
+  $weight: false,
+  $color: false,
+  $style: false,
+  $align: false,
+  $l-spacing: false,
+  $w-spacing: false,
+  $l-height: false,
+  $t-transform: false
+) {
+  @if $family {
+    font-family: $family;
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $align {
+    text-align: $align;
+  }
+  @if $l-spacing {
+    letter-spacing: $l-spacing;
+  }
+  @if $w-spacing {
+    word-spacing: $w-spacing;
+  }
+  @if $l-height {
+    line-height: $l-height;
+  }
+  @if $t-transform {
+    text-transform: $t-transform;
+  }
+}
+
+@mixin z-index($name) {
+  z-index: f_z-index($name);
+}

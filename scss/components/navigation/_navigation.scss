@@ -1,0 +1,42 @@
+$large-bp: 950px;
+$medium-bp: 660px;
+$small-bp: 450px;
+
+$nav-class-name: '.o-nav';
+
+@import 'backdrop';
+@import 'burger';
+@import 'link';
+@import 'logo';
+@import 'mobile';
+
+#{$nav-class-name} {
+  display: flex;
+  align-items: center;
+
+  // margin: 0
+  padding: 20px clamp(20px, 3vw, 80px);
+
+  width: 100vw;
+
+  @include font($t-transform: uppercase);
+
+  @include respond($large-bp) {
+    flex-wrap: wrap;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @include respond($medium-bp) {
+    justify-content: space-between;
+  }
+
+  @include respond($small-bp) {
+    padding: 15px 15px;
+  }
+
+  &--skin {
+    box-shadow: 5px 0px 7px 2px f_color(main, secondary, $alpha: 0.2);
+  }
+}

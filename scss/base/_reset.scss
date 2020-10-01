@@ -5,27 +5,27 @@
 }
 
 /**
- * 1. Remove paddings from all elements
- * 2. Remove margin from all elements
+ * 1. Remove margin from all elements
+ * 2. Remove paddings from all elements
 */
 * {
-  padding: 0; /* 1 */
-  margin: 0; /* 2 */
+  margin: 0; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
+ * 1. Remove the margin in Firefox and Safari.
+ * 2. Change the font styles in all browsers.
  */
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  margin: 0; /* 1 */
+  font-family: inherit; /* 2 */
+  font-size: 100%; /* 2 */
+  line-height: 1.15; /* 2 */
 }
 
 /**
@@ -34,8 +34,7 @@ textarea {
  */
 button,
 input {
-  /* 1 */
-  overflow: visible;
+  overflow: visible; /* 1 */
 }
 
 /**
@@ -45,8 +44,7 @@ input {
 
 button,
 select {
-  /* 1 */
-  text-transform: none;
+  text-transform: none; /* 1 */
 }
 
 /**
@@ -76,4 +74,8 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul {
+  list-style: none;
 }

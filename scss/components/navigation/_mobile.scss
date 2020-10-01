@@ -1,0 +1,80 @@
+#{$nav-class-name}-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -100vw;
+
+  transition: right 0.3s ease-in-out;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: auto;
+
+  @include respond($small-bp) {
+    display: block;
+  }
+
+  &--skin {
+    background-color: f_color(main, tertiary);
+  }
+
+  &-container {
+    display: none;
+
+    margin-left: 10px;
+
+    @include respond($small-bp) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+
+    width: 100vw;
+    height: 66px;
+
+    &--skin {
+      border-bottom: 1px solid f_color(main, secondary, $alpha: 0.2);
+      box-shadow: 5px 0px 7px 2px f_color(main, secondary, $alpha: 0.2);
+      background-color: f_color(main, tertiary);
+    }
+
+    &-spacer {
+      height: 66px;
+    }
+  }
+
+  & #{$nav-class-name}__link {
+    display: block;
+
+    padding: 20px 0;
+
+    @include font($size: 16px);
+
+    &--button {
+      padding: 15px 0;
+      @include font($align: center);
+    }
+
+    &--login {
+      margin-top: 20px;
+    }
+
+    &-container {
+      display: block;
+
+      margin-bottom: 40px;
+    }
+
+    &-wrapper {
+      margin: 0 40px;
+      padding: 0;
+
+      &--skin {
+        border-bottom: 1px solid f_color(main, secondary, $alpha: 0.2);
+      }
+    }
+  }
+}
