@@ -9,7 +9,9 @@
   </head>
   <body>
     <div class="l-page">
-      <header class="l-page-header">
+      <header class="l-page__header">
+        <div class="site-margin-remover">&nbsp;</div>
+
         <nav class="o-nav o-nav--skin">
           <div class="o-nav__logo">
             <div class="o-logo-wrapper">
@@ -96,22 +98,36 @@
         </nav>
 
         <div class="social-media-container">
-          <div class="social-media-wrapper">
+          <a href="#" class="social-media-wrapper social-media-wrapper--skin">
             <svg class="social-media__icon">
-              s
-              <use xlink:href="#facebook"></use>
+              <use xlink:href="./assets/svg/sprite.svg#icon-facebook"></use>
             </svg>
-          </div>
-          <div class="social-media-wrapper">
-            <svg class="social-media__icon">
-              s
-              <use xlink:href="#twitter"></use>
+          </a>
+          <a href="#" class="social-media-wrapper social-media-wrapper--twitter social-media-wrapper--skin">
+            <svg class="social-media__icon social-media__icon--twitter">
+              <use xlink:href="./assets/svg/sprite.svg#icon-twitter"></use>
             </svg>
-          </div>
-          <div class="social-media-wrapper">
+          </a>
+          <a href="#" class="social-media-wrapper social-media-wrapper--skin">
             <svg class="social-media__icon">
-              s
-              <use xlink:href="#instagram"></use>
+              <use xlink:href="./assets/svg/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="cta">
+          <p class="cta__header">How do you design content for every language</p>
+          <p class="cta__text">
+            We're the content, research and design team at Oxford. We help riders move, restaurants grow and customers
+            eat in over 200 cities around the world. Come find the answers with us.
+          </p>
+          <button class="cta__button">work with us</button>
+        </div>
+
+        <div class="video video--small">
+          <div class="video__play">
+            <svg class="video__play-icon">
+              <use xlink:href="./assets/svg/sprite.svg#icon-play"></use>
             </svg>
           </div>
         </div>

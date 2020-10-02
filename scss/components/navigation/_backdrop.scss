@@ -9,6 +9,8 @@
   opacity: 0;
   @include z-index(nav-backdrop);
 
+  pointer-events: none;
+
   width: 100vw;
   height: 100vh;
 

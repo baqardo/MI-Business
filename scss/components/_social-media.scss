@@ -1,0 +1,63 @@
+.social-media {
+  &-container {
+    position: absolute;
+    top: 200px;
+
+    margin-left: clamp(20px, 3vw, 80px);
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.4s ease-in-out;
+
+    width: 55px;
+    height: 55px;
+
+    &:not(:first-of-type) {
+      margin-top: 30px;
+    }
+
+    &:hover {
+      background-color: f_color(main, secondary);
+    }
+
+    &--skin {
+      border-radius: 50%;
+      border: 1px solid f_color(main, secondary, 0.15);
+    }
+
+    &--twitter {
+      background-color: f_color(main, secondary);
+
+      &:hover {
+        background-color: f_color(main, tertiary);
+      }
+    }
+  }
+
+  &-wrapper:hover > &__icon {
+    color: f_color(font, tertiary);
+  }
+
+  &-wrapper--twitter:hover > &__icon--twitter {
+    color: f_color(font, secondary);
+  }
+
+  &__icon {
+    display: inline-block;
+
+    transition: all 0.4s ease-in-out;
+
+    width: 20px;
+    height: 20px;
+
+    fill: currentColor;
+
+    &--twitter {
+      color: f_color(font, tertiary);
+    }
+  }
+}

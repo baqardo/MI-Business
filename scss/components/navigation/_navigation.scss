@@ -11,10 +11,12 @@ $nav-class-name: '.o-nav';
 @import 'mobile';
 
 #{$nav-class-name} {
+  position: fixed;
   display: flex;
   align-items: center;
 
-  // margin: 0
+  @include z-index(nav);
+
   padding: 20px clamp(20px, 3vw, 80px);
 
   width: 100vw;
@@ -38,5 +40,6 @@ $nav-class-name: '.o-nav';
 
   &--skin {
     box-shadow: 5px 0px 7px 2px f_color(main, secondary, $alpha: 0.2);
+    background-color: f_color(main, tertiary);
   }
 }
