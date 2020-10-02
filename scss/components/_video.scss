@@ -1,3 +1,5 @@
+$large-bp: 950px;
+
 .video {
   &--small {
     position: absolute;
@@ -14,6 +16,10 @@
     background-color: f_color(main, primary);
     background-blend-mode: soft-light;
     background-size: cover;
+
+    @include respond($large-bp) {
+      display: none;
+    }
   }
 
   &__play {

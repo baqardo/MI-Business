@@ -1,11 +1,31 @@
+$large-bp: 950px;
+$medium-bp: 600px;
+$small-bp: 450px;
+
 .cta {
   margin-top: 190px;
   margin-left: clamp(100px, 21vw, 900px);
 
+  @include respond($medium-bp) {
+    margin-left: clamp(20px, 7vw, 150px);
+  }
+
   &__header {
-    width: clamp(400px, 50vw, 700px);
+    width: clamp(450px, 50vw, 700px);
 
     @include font($size: clamp(48px, 4vw, 72px), $weight: bold, $color: f_color(font, secondary), $l-spacing: -2px);
+
+    @include respond($large-bp) {
+      width: clamp(450px, 75vw, 650px);
+
+      @include font($size: clamp(38px, 6vw, 60px));
+    }
+
+    @include respond($small-bp) {
+      width: clamp(250px, 80vw, 400px);
+
+      @include font($size: clamp(28px, 8vw, 38px));
+    }
   }
 
   &__text {
@@ -14,6 +34,18 @@
     width: clamp(400px, 50vw, 700px);
 
     @include font($size: clamp(18px, 4vw, 2px), $l-height: 32px, $l-spacing: -0.5);
+
+    @include respond($large-bp) {
+      width: clamp(400px, 70vw, 650px);
+
+      @include font($size: clamp(18px, 4vw, 2px));
+    }
+
+    @include respond($small-bp) {
+      width: clamp(250px, 90vw, 400px);
+
+      @include font($size: clamp(12px, 4vw, 18px), $l-height: 1.5);
+    }
   }
 
   &__button {
@@ -31,6 +63,11 @@
     &:hover {
       background-color: f_color(main, tertiary);
       @include font($color: f_color(font, secondary));
+    }
+
+    @include respond($small-bp) {
+      margin-top: 25px;
+      padding: 10px 30px;
     }
   }
 }

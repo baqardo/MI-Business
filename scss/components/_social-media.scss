@@ -1,9 +1,15 @@
+$large-bp: 600px;
+
 .social-media {
   &-container {
     position: absolute;
     top: 200px;
 
     margin-left: clamp(20px, 3vw, 80px);
+
+    @include respond($large-bp) {
+      display: none;
+    }
   }
 
   &-wrapper {

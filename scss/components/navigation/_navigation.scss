@@ -27,10 +27,11 @@ $nav-class-name: '.o-nav';
     flex-wrap: wrap;
 
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
   }
 
   @include respond($medium-bp) {
+    padding-bottom: 15px;
     justify-content: space-between;
   }
 
