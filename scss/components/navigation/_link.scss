@@ -2,22 +2,22 @@
   transition: all 0.4s;
 
   &:hover:not(&--active):not(&--register) {
-    @include font($color: f_color(font, primary-dark));
+    color: f_color(font, primary-dark);
   }
 
   &--skin {
     @include font($size: clamp(12px, 1.4vw, 18px), $weight: bold, $l-spacing: 3px);
 
     @include respond($large-bp) {
-      @include font($size: clamp(12px, 1.8vw, 17px));
+      font-size: clamp(12px, 1.8vw, 17px);
     }
     @include respond($medium-bp) {
-      @include font($size: clamp(12px, 2.5vw, 17px));
+      font-size: clamp(12px, 2.5vw, 17px);
     }
   }
 
   &--active {
-    @include font($color: f_color(font, primary));
+    color: f_color(font, primary);
 
     &:hover {
       cursor: default;
@@ -39,7 +39,7 @@
   &--register {
     background-color: f_color(main, primary);
 
-    @include font($color: f_color(font, tertiary));
+    color: f_color(font, tertiary);
 
     &:hover {
       background-color: f_color(main, primary-darker);

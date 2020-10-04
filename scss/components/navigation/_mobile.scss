@@ -1,13 +1,10 @@
 #{$nav-class-name}-mobile {
   display: none;
-  position: absolute;
-  top: 0;
-  right: -100vw;
+  @include position(absolute, 0, -100vw);
 
   transition: right 0.3s ease-in-out;
 
-  width: 100vw;
-  height: 100vh;
+  @include size(100vw, 100vh);
 
   overflow: auto;
 
@@ -32,8 +29,7 @@
   &__menu {
     position: fixed;
 
-    width: 100vw;
-    height: 66px;
+    @include size(100vw, 66px);
 
     &--skin {
       border-bottom: 1px solid f_color(main, secondary, $alpha: 0.2);
@@ -51,11 +47,11 @@
 
     padding: 20px 0;
 
-    @include font($size: 16px);
+    font-size: 16px;
 
     &--button {
       padding: 15px 0;
-      @include font($align: center);
+      text-align: center;
     }
 
     &--login {

@@ -4,48 +4,80 @@
   }
 }
 
-@mixin font(
-  $family: false,
-  $size: false,
-  $weight: false,
-  $color: false,
-  $style: false,
-  $align: false,
-  $l-spacing: false,
-  $w-spacing: false,
-  $l-height: false,
-  $t-transform: false
+@mixin position($pos: '', $top: '', $right: '', $bottom: '', $left: '') {
+  position: #{$pos};
+  top: #{$top};
+  right: #{$right};
+  bottom: #{$bottom};
+  left: #{$left};
+}
+
+@mixin size($width: '', $height: $width) {
+  width: #{$width};
+  height: #{$height};
+}
+
+@mixin flex(
+  $align-i: '',
+  $justify-c: '',
+  $direction: '',
+  $wrap: '',
+  $grow: '',
+  $shrink: '',
+  $basis: '',
+  $flow: '',
+  $align-c: '',
+  $align-s: '',
+  $justify-i: '',
+  $justify-s: ''
 ) {
-  @if $family {
-    font-family: $family;
-  }
-  @if $size {
-    font-size: $size;
-  }
-  @if $weight {
-    font-weight: $weight;
-  }
-  @if $color {
-    color: $color;
-  }
-  @if $style {
-    font-style: $style;
-  }
-  @if $align {
-    text-align: $align;
-  }
-  @if $l-spacing {
-    letter-spacing: $l-spacing;
-  }
-  @if $w-spacing {
-    word-spacing: $w-spacing;
-  }
-  @if $l-height {
-    line-height: $l-height;
-  }
-  @if $t-transform {
-    text-transform: $t-transform;
-  }
+  display: flex;
+  align-items: #{$align-i};
+  justify-content: #{$justify-c};
+  flex-direction: #{$direction};
+  flex-wrap: #{$wrap};
+  flex-grow: #{$grow};
+  flex-shrink: #{$shrink};
+  flex-basis: #{$basis};
+  flex-flow: #{$flow};
+  align-content: #{$align-c};
+  align-self: #{$align-s};
+  justify-items: #{$justify-i};
+  justify-self: #{$justify-s};
+}
+
+@mixin background($image: '', $color: '', $size: '', $position: '', $repeat: '', $attachment: '', $blend: '') {
+  background-image: #{$image};
+  background-color: #{$color};
+  background-size: #{$size};
+  background-position: #{$position};
+  background-repeat: #{$repeat};
+  background-attachment: #{$attachment};
+  background-blend-mode: #{$blend};
+}
+
+@mixin font(
+  $family: '',
+  $size: '',
+  $weight: '',
+  $color: '',
+  $style: '',
+  $align: '',
+  $l-spacing: '',
+  $w-spacing: '',
+  $l-height: '',
+  $t-transform: ''
+) {
+  font-family: #{$family};
+  font-size: #{$size};
+  font-weight: #{$weight};
+  color: #{$color};
+  font-style: #{$style};
+  text-align: #{$align};
+  letter-spacing: #{$l-spacing};
+  word-spacing: #{$w-spacing};
+  line-height: #{$l-height};
+  text-transform: #{$t-transform};
 }
 
 @mixin z-index($name) {

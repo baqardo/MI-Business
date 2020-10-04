@@ -13,8 +13,4 @@
 
     width: max-content;
   }
-
-  @include respond($small-bp) {
-    width: max-content;
-  }
 }
