@@ -8,6 +8,10 @@
 
   overflow: auto;
 
+  @include respond($medium-bp, true) {
+    display: block;
+  }
+
   @include respond($small-bp) {
     display: block;
   }
@@ -20,6 +24,10 @@
     display: none;
 
     margin-left: 10px;
+
+    @include respond($medium-bp, true) {
+      display: block;
+    }
 
     @include respond($small-bp) {
       display: block;

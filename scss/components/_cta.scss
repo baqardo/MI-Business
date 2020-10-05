@@ -5,18 +5,25 @@ $small-bp: 450px;
 .cta {
   display: flex;
 
-  margin-top: 190px;
+  @include padding($t: 200px, $b: 150px, $l: clamp(100px, 21vw, 900px));
+
+  @include respond($large-bp, true) {
+    @include padding($t: 150px, $b: 100px);
+  }
+
+  @include respond($medium-bp) {
+    @include padding($t: 150px, $b: 100px, $l: clamp(18px, 6vw, 150px));
+  }
+
+  @include respond($small-bp) {
+    @include padding($t: 100px, $b: 50px);
+  }
 
   &-container {
     width: clamp(450px, 50vw, 700px);
-    margin-left: clamp(100px, 21vw, 900px);
 
     @include respond($large-bp) {
       width: clamp(415px, 75vw, 650px);
-    }
-
-    @include respond($medium-bp) {
-      margin-left: clamp(18px, 6vw, 150px);
     }
 
     @include respond($small-bp) {
@@ -72,11 +79,120 @@ $small-bp: 450px;
       padding: 10px 30px;
     }
   }
+}
 
-  &__image {
+.cta--small {
+  align-items: center;
+  padding-top: 150px;
+
+  @include background(
+    $image: (
+      url(../assets/img/workspace.jpg),
+      linear-gradient(to right, f_color(main, primary) 73vw, f_color(main, tertiary) 27vw),
+    ),
+    $size: cover,
+    $repeat: no-repeat,
+    $blend: soft-light
+  );
+
+  @include respond($large-bp) {
+    @include background(url(../assets/img/workspace.jpg), f_color(main, primary), cover);
+  }
+
+  @include respond($large-bp, true) {
+    @include padding($v: 50px);
+  }
+
+  @include respond($medium-bp) {
+    @include padding($v: 50px, $l: clamp(18px, 6vw, 150px));
+  }
+
+  & .cta__image {
     width: 100%;
+
     &-wrapper {
-      width: 650px;
+      position: relative;
+      margin-left: clamp(30px, 3vw, 150px);
+      width: 50%;
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+
+        transform: rotate(-90deg);
+
+        @include font(Dosis, 18px, 900, $l-height: 32px);
+
+        content: 'Delighting customers in over\A 200 cities in the world.';
+        white-space: pre;
+      }
+
+      &::after {
+        @include flex(center, center);
+        @include position(absolute, -25px, -25px);
+
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 40px rgba(black, 0.1);
+
+        width: 55px;
+        height: 55px;
+
+        font-size: 40px;
+        font-weight: bold;
+
+        content: '+';
+      }
+
+      @include respond($large-bp) {
+        display: none;
+      }
+    }
+  }
+
+  & .cta-container {
+    flex-shrink: 0;
+    width: clamp(300px, 30vw, 500px);
+
+    @include respond($large-bp) {
+      width: clamp(415px, 75vw, 650px);
+    }
+
+    @include respond($small-bp) {
+      width: clamp(300px, 80vw, 400px);
+    }
+  }
+
+  & .cta__header {
+    @include font($size: clamp(32px, 4vw, 48px), $weight: bold, $color: f_color(font, tertiary), $l-spacing: -1px);
+
+    @include respond($large-bp) {
+      font-size: clamp(38px, 6vw, 60px);
+    }
+
+    @include respond($small-bp) {
+      @include font($size: clamp(28px, 8vw, 38px), $l-spacing: 1);
+    }
+  }
+
+  & .cta__text {
+    margin-top: 50px;
+
+    @include font(
+      $size: clamp(18px, 2vw, 24px),
+      $weight: normal,
+      $color: f_color(font, tertiary),
+      $l-height: 32px,
+      $l-spacing: -0.5
+    );
+
+    @include respond($large-bp) {
+      font-size: clamp(18px, 4vw, 22px);
+    }
+
+    @include respond($small-bp) {
+      @include font($size: clamp(12px, 4vw, 18px), $l-spacing: 0, $l-height: 1.5);
     }
   }
 }

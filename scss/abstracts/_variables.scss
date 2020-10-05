@@ -15,6 +15,8 @@ $z-index: (
 $colors: (
   main: (
     primary: $color-blue,
+    primary-light: color.adjust($color-blue, $lightness: 10%),
+    primary-lighter: color.adjust($color-blue, $lightness: 20%),
     primary-dark: color.adjust($color-blue, $lightness: -10%),
     primary-darker: color.adjust($color-blue, $lightness: -20%),
     secondary: $color-black,

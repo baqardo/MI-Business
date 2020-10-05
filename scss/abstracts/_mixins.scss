@@ -1,7 +1,65 @@
-@mixin respond($breakpoint) {
-  @media only screen and (max-width: $breakpoint) {
-    @content;
+@mixin respond($breakpoint, $landscape: false) {
+  @if not $landscape {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
+      @content;
+    }
   }
+}
+
+@mixin padding($t: '', $r: '', $b: '', $l: '', $h: '', $v: '') {
+  padding-top: #{$t};
+  padding-right: #{$r};
+  padding-bottom: #{$b};
+  padding-left: #{$l};
+
+  @if $h {
+    padding-left: #{$h};
+    padding-right: #{$h};
+  }
+
+  @if $v {
+    padding-top: #{$v};
+    padding-bottom: #{$v};
+  }
+}
+
+@mixin margin($t: '', $r: '', $b: '', $l: '', $h: '', $v: '') {
+  margin-top: #{$t};
+  margin-right: #{$r};
+  margin-bottom: #{$b};
+  margin-left: #{$l};
+
+  @if $h {
+    margin-left: $h;
+    margin-right: $h;
+  }
+
+  @if $v {
+    margin-top: $v;
+    margin-bottom: $v;
+  }
+}
+
+@mixin spacing(
+  $m-t: '',
+  $m-r: '',
+  $m-b: '',
+  $m-l: '',
+  $m-h: '',
+  $m-v: '',
+  $p-t: '',
+  $p-r: '',
+  $p-b: '',
+  $p-l: '',
+  $p-h: '',
+  $p-v: ''
+) {
+  @include margin($m-t, $m-r, $m-b, $m-l, $m-h, $m-v);
+  @include padding($p-t, $p-r, $p-b, $p-l, $p-h, $p-v);
 }
 
 @mixin position($pos: '', $top: '', $right: '', $bottom: '', $left: '') {

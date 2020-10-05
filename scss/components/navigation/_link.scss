@@ -49,6 +49,14 @@
   &-container {
     display: flex;
 
+    @include respond($medium-bp, true) {
+      margin-left: auto;
+
+      &:not(&--user-connect) {
+        display: none;
+      }
+    }
+
     @include respond($small-bp) {
       margin-left: auto;
 

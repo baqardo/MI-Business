@@ -30,6 +30,7 @@ $large-bp: 600px;
     &--skin {
       border-radius: 50%;
       border: 1px solid f_color(main, secondary, 0.15);
+      background-color: f_color(main, tertiary);
     }
 
     &--twitter {

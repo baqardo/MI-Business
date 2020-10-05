@@ -12,6 +12,7 @@ $nav-class-name: '.o-nav';
 
 #{$nav-class-name} {
   position: fixed;
+  top: 0;
   @include flex(center);
 
   @include z-index(nav);
@@ -32,6 +33,10 @@ $nav-class-name: '.o-nav';
   @include respond($medium-bp) {
     padding-bottom: 15px;
     justify-content: space-between;
+  }
+
+  @include respond($medium-bp, true) {
+    padding: 15px 15px;
   }
 
   @include respond($small-bp) {
