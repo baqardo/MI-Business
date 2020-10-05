@@ -3,23 +3,25 @@ $medium-bp: 600px;
 $small-bp: 450px;
 
 .cta {
+  display: flex;
+
   margin-top: 190px;
-  margin-left: clamp(100px, 21vw, 900px);
 
-  width: clamp(450px, 50vw, 700px);
+  &-container {
+    width: clamp(450px, 50vw, 700px);
+    margin-left: clamp(100px, 21vw, 900px);
 
-  @include respond($large-bp) {
-    width: clamp(415px, 75vw, 650px);
-  }
+    @include respond($large-bp) {
+      width: clamp(415px, 75vw, 650px);
+    }
 
-  @include respond($medium-bp) {
-    margin-left: clamp(18px, 6vw, 150px);
-  }
+    @include respond($medium-bp) {
+      margin-left: clamp(18px, 6vw, 150px);
+    }
 
-  @include respond($small-bp) {
-    margin-top: 120px;
-
-    width: clamp(300px, 80vw, 400px);
+    @include respond($small-bp) {
+      width: clamp(300px, 80vw, 400px);
+    }
   }
 
   &__header {
@@ -68,6 +70,13 @@ $small-bp: 450px;
     @include respond($small-bp) {
       margin-top: 25px;
       padding: 10px 30px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    &-wrapper {
+      width: 650px;
     }
   }
 }

@@ -4,7 +4,8 @@ $large-bp: 950px;
   &--small {
     @include position(absolute, $bottom: 0, $right: 0);
     @include flex(center, center);
-    @include size(clamp(250px, 27vw, 450px));
+
+    @include size(max(250px, 27vw));
 
     @include background(
       $image: url(../assets/img/header-video.jpg),
