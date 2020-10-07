@@ -1,30 +1,13 @@
-$large-bp: 600px;
-
 .social-media {
-  &-container {
-    @include position(absolute, 200px);
-
-    margin-left: clamp(20px, 3vw, 80px);
-
-    @include respond($large-bp) {
-      display: none;
-    }
-  }
-
-  &-wrapper {
-    @include flex(center, center);
-
+  &__item {
+    display: block;
     transition: all 0.4s ease-in-out;
 
-    @include size(55px);
-
-    &:not(:first-of-type) {
-      margin-top: 30px;
-    }
+    padding: 20px;
+    margin-top: 30px;
 
     &:hover {
-      background-color: f_color(main, secondary);
-      color: f_color(font, tertiary);
+      filter: invert(1);
     }
 
     &--skin {
@@ -34,18 +17,16 @@ $large-bp: 600px;
     }
 
     &--twitter {
-      background-color: f_color(main, secondary);
-      color: f_color(font, tertiary);
+      background-color: f_color(main, secondary-black);
+      border: 1px solid f_color(main, tertiary, 0.15);
 
-      &:hover {
-        background-color: f_color(main, tertiary);
-        color: f_color(font, secondary);
-      }
+      color: f_color(font, tertiary);
     }
   }
 
   &__icon {
-    @include size(20px);
+    width: 20px;
+    height: 20px;
 
     fill: currentColor;
   }

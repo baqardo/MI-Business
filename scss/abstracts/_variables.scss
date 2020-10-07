@@ -2,14 +2,12 @@
 @use 'sass:color';
 
 $color-white: #fff;
-$color-black: #0f1120;
+$color-black: #000;
 $color-blue: #1268fe;
 $color-dark-blue: #0f1120;
 
 $z-index: (
-  nav: 10,
-  nav-burger: 20,
-  nav-backdrop: -10,
+  nav: 1,
 );
 
 $colors: (
@@ -19,14 +17,15 @@ $colors: (
     primary-lighter: color.adjust($color-blue, $lightness: 20%),
     primary-dark: color.adjust($color-blue, $lightness: -10%),
     primary-darker: color.adjust($color-blue, $lightness: -20%),
-    secondary: $color-black,
+    secondary: $color-dark-blue,
     secondary-light: color.adjust($color-blue, $lightness: 10%),
+    secondary-black: $color-black,
     tertiary: $color-white,
   ),
   font: (
     primary: $color-blue,
     primary-dark: color.adjust($color-blue, $lightness: -10%),
-    secondary: $color-black,
+    secondary: $color-dark-blue,
     tertiary: $color-white,
   ),
 );

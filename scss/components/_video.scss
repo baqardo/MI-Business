@@ -1,34 +1,20 @@
-$large-bp: 950px;
-
 .video {
-  &--small {
-    @include position(absolute, $bottom: 0, $right: 0);
-    @include flex(center, center);
+  position: relative;
 
-    @include size(max(250px, 27vw));
+  background-image: url(../assets/img/header-video.jpg);
+  background-color: f_color(main, primary);
+  background-size: cover;
+  background-blend-mode: soft-light;
 
-    @include background(
-      $image: url(../assets/img/header-video.jpg),
-      $color: f_color(main, primary),
-      $size: cover,
-      $blend: soft-light
-    );
-
-    @include respond($large-bp) {
-      display: none;
-    }
-  }
+  padding: 50% 0;
 
   &__play {
-    @include size(35%);
-    @include flex(center, center);
+    @include absolute-center;
+    width: 35%;
+    height: 35%;
 
     &:hover {
       cursor: pointer;
-    }
-
-    &-icon {
-      @include size(100%);
     }
   }
 }

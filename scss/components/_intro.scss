@@ -1,0 +1,67 @@
+.intro {
+  background-color: #fff;
+
+  &__background {
+    background-color: f_color(main, primary);
+    background-image: url(../assets/img/workspace.jpg);
+    background-size: cover;
+    background-blend-mode: soft-light;
+  }
+
+  &__cta {
+    padding: 200px 0;
+  }
+
+  &__side {
+    background-image: url(../assets/svg/intro-decoration.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__image {
+    transform: translate(-50%, 70%);
+
+    background-image: url(../assets/img/shapes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 600px;
+    height: 420px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+
+      transform: rotate(-90deg);
+
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 32px;
+
+      white-space: pre;
+
+      content: 'Delighting customers in over\A 200 cities in the world.';
+    }
+
+    &::after {
+      position: absolute;
+      top: -25px;
+      right: -25px;
+
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(black, 0.1);
+
+      background-color: white;
+      background-image: url(../assets/svg/plus.svg);
+      background-repeat: no-repeat;
+      background-size: 40%;
+      background-position: 50% 50%;
+
+      width: 55px;
+      height: 55px;
+
+      content: '';
+    }
+  }
+}

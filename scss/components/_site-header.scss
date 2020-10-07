@@ -1,0 +1,15 @@
+.site-header {
+  padding-top: 250px;
+
+  &--skin {
+    background-color: #fff;
+    background-image: url(../assets/svg/header-decoration.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% center;
+  }
+
+  &__cta {
+    padding-bottom: 200px;
+  }
+}

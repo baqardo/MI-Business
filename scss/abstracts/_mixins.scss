@@ -10,134 +10,146 @@
   }
 }
 
-@mixin padding($t: '', $r: '', $b: '', $l: '', $h: '', $v: '') {
-  padding-top: #{$t};
-  padding-right: #{$r};
-  padding-bottom: #{$b};
-  padding-left: #{$l};
-
-  @if $h {
-    padding-left: #{$h};
-    padding-right: #{$h};
-  }
-
-  @if $v {
-    padding-top: #{$v};
-    padding-bottom: #{$v};
-  }
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@mixin margin($t: '', $r: '', $b: '', $l: '', $h: '', $v: '') {
-  margin-top: #{$t};
-  margin-right: #{$r};
-  margin-bottom: #{$b};
-  margin-left: #{$l};
-
-  @if $h {
-    margin-left: $h;
-    margin-right: $h;
-  }
-
-  @if $v {
-    margin-top: $v;
-    margin-bottom: $v;
-  }
+@mixin grid16 {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
 }
 
-@mixin spacing(
-  $m-t: '',
-  $m-r: '',
-  $m-b: '',
-  $m-l: '',
-  $m-h: '',
-  $m-v: '',
-  $p-t: '',
-  $p-r: '',
-  $p-b: '',
-  $p-l: '',
-  $p-h: '',
-  $p-v: ''
-) {
-  @include margin($m-t, $m-r, $m-b, $m-l, $m-h, $m-v);
-  @include padding($p-t, $p-r, $p-b, $p-l, $p-h, $p-v);
-}
+// @mixin z-index($name) {
+//   z-index: f_z-index($name);
+// }
 
-@mixin position($pos: '', $top: '', $right: '', $bottom: '', $left: '') {
-  position: #{$pos};
-  top: #{$top};
-  right: #{$right};
-  bottom: #{$bottom};
-  left: #{$left};
-}
+// @mixin padding($t: '', $r: '', $b: '', $l: '', $h: '', $v: '') {
+//   padding-top: #{$t};
+//   padding-right: #{$r};
+//   padding-bottom: #{$b};
+//   padding-left: #{$l};
 
-@mixin size($width: '', $height: $width) {
-  width: #{$width};
-  height: #{$height};
-}
+//   @if $h {
+//     padding-left: #{$h};
+//     padding-right: #{$h};
+//   }
 
-@mixin flex(
-  $align-i: '',
-  $justify-c: '',
-  $direction: '',
-  $wrap: '',
-  $grow: '',
-  $shrink: '',
-  $basis: '',
-  $flow: '',
-  $align-c: '',
-  $align-s: '',
-  $justify-i: '',
-  $justify-s: ''
-) {
-  display: flex;
-  align-items: #{$align-i};
-  justify-content: #{$justify-c};
-  flex-direction: #{$direction};
-  flex-wrap: #{$wrap};
-  flex-grow: #{$grow};
-  flex-shrink: #{$shrink};
-  flex-basis: #{$basis};
-  flex-flow: #{$flow};
-  align-content: #{$align-c};
-  align-self: #{$align-s};
-  justify-items: #{$justify-i};
-  justify-self: #{$justify-s};
-}
+//   @if $v {
+//     padding-top: #{$v};
+//     padding-bottom: #{$v};
+//   }
+// }
 
-@mixin background($image: '', $color: '', $size: '', $position: '', $repeat: '', $attachment: '', $blend: '') {
-  background-image: #{$image};
-  background-color: #{$color};
-  background-size: #{$size};
-  background-position: #{$position};
-  background-repeat: #{$repeat};
-  background-attachment: #{$attachment};
-  background-blend-mode: #{$blend};
-}
+// @mixin font(
+//   $family: '',
+//   $size: '',
+//   $weight: '',
+//   $color: '',
+//   $style: '',
+//   $align: '',
+//   $l-spacing: '',
+//   $w-spacing: '',
+//   $l-height: '',
+//   $t-transform: ''
+// ) {
+//   font-family: #{$family};
+//   font-size: #{$size};
+//   font-weight: #{$weight};
+//   color: #{$color};
+//   font-style: #{$style};
+//   text-align: #{$align};
+//   letter-spacing: #{$l-spacing};
+//   word-spacing: #{$w-spacing};
+//   line-height: #{$l-height};
+//   text-transform: #{$t-transform};
+// }
 
-@mixin font(
-  $family: '',
-  $size: '',
-  $weight: '',
-  $color: '',
-  $style: '',
-  $align: '',
-  $l-spacing: '',
-  $w-spacing: '',
-  $l-height: '',
-  $t-transform: ''
-) {
-  font-family: #{$family};
-  font-size: #{$size};
-  font-weight: #{$weight};
-  color: #{$color};
-  font-style: #{$style};
-  text-align: #{$align};
-  letter-spacing: #{$l-spacing};
-  word-spacing: #{$w-spacing};
-  line-height: #{$l-height};
-  text-transform: #{$t-transform};
-}
+// @mixin background($image: '', $color: '', $size: '', $position: '', $repeat: '', $attachment: '', $blend: '') {
+//   background-image: #{$image};
+//   background-color: #{$color};
+//   background-size: #{$size};
+//   background-position: #{$position};
+//   background-repeat: #{$repeat};
+//   background-attachment: #{$attachment};
+//   background-blend-mode: #{$blend};
+// }
 
-@mixin z-index($name) {
-  z-index: f_z-index($name);
-}
+// @mixin flex(
+//   $align-i: '',
+//   $justify-c: '',
+//   $direction: '',
+//   $wrap: '',
+//   $grow: '',
+//   $shrink: '',
+//   $basis: '',
+//   $flow: '',
+//   $align-c: '',
+//   $align-s: '',
+//   $justify-i: '',
+//   $justify-s: ''
+// ) {
+//   display: flex;
+//   align-items: #{$align-i};
+//   justify-content: #{$justify-c};
+//   flex-direction: #{$direction};
+//   flex-wrap: #{$wrap};
+//   flex-grow: #{$grow};
+//   flex-shrink: #{$shrink};
+//   flex-basis: #{$basis};
+//   flex-flow: #{$flow};
+//   align-content: #{$align-c};
+//   align-self: #{$align-s};
+//   justify-items: #{$justify-i};
+//   justify-self: #{$justify-s};
+// }
+
+// @mixin margin($t: '', $r: '', $b: '', $l: '', $h: '', $v: '') {
+//   margin-top: #{$t};
+//   margin-right: #{$r};
+//   margin-bottom: #{$b};
+//   margin-left: #{$l};
+
+//   @if $h {
+//     margin-left: $h;
+//     margin-right: $h;
+//   }
+
+//   @if $v {
+//     margin-top: $v;
+//     margin-bottom: $v;
+//   }
+// }
+
+// @mixin spacing(
+//   $m-t: '',
+//   $m-r: '',
+//   $m-b: '',
+//   $m-l: '',
+//   $m-h: '',
+//   $m-v: '',
+//   $p-t: '',
+//   $p-r: '',
+//   $p-b: '',
+//   $p-l: '',
+//   $p-h: '',
+//   $p-v: ''
+// ) {
+//   @include margin($m-t, $m-r, $m-b, $m-l, $m-h, $m-v);
+//   @include padding($p-t, $p-r, $p-b, $p-l, $p-h, $p-v);
+// }
+
+// @mixin position($pos: '', $top: '', $right: '', $bottom: '', $left: '') {
+//   position: #{$pos};
+//   top: #{$top};
+//   right: #{$right};
+//   bottom: #{$bottom};
+//   left: #{$left};
+// }
+
+// @mixin size($width: '', $height: $width) {
+//   width: #{$width};
+//   height: #{$height};
+// }

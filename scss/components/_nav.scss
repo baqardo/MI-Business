@@ -1,0 +1,81 @@
+.nav {
+  z-index: f_z-index(nav);
+
+  padding: 30px 0;
+
+  &--skin {
+    text-transform: uppercase;
+    box-shadow: 5px 0px 7px 2px f_color(main, secondary, $alpha: 0.2);
+    background-color: f_color(main, tertiary);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__user {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.nav__link {
+  transition: all 0.4s;
+
+  &:hover:not(&--active):not(&--register) {
+    color: f_color(font, primary-dark);
+  }
+
+  &--skin {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+
+  &--active {
+    color: f_color(font, primary);
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  &-wrapper {
+    margin-right: 15px;
+  }
+}
+
+.nav__btn {
+  transition: all 0.4s;
+
+  padding: 10px;
+
+  &--skin {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+
+  &--login {
+    border: 1px solid f_color(main, secondary, $alpha: 0.3);
+
+    &:hover {
+      border: 1px solid f_color(main, primary-dark, $alpha: 0.6);
+    }
+  }
+
+  &--register {
+    background-color: f_color(main, primary);
+
+    color: f_color(font, tertiary);
+
+    &:hover {
+      background-color: f_color(main, primary-darker);
+    }
+  }
+
+  &-wrapper {
+    margin-right: 60px;
+    // margin-right: clamp(20px, 3vw, 40px);
+  }
+}

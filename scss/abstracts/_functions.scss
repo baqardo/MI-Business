@@ -26,20 +26,3 @@
 
   @return $value;
 }
-
-@function f_flex-constructor($key) {
-  $flex-map: (
-    'align-i': 'align-items',
-    'justify-c': 'justify-content',
-    'direction': 'flex-direction',
-    'wrap': 'flex-wrap',
-    'grow': 'flex-grow',
-    'shrink': 'flex-shrink',
-    'basis': 'flex-basis',
-    'flow': 'flex-flow',
-    'align-c': 'align-content',
-    'align-s': 'align-self',
-    'justify-i': 'justify-items',
-    'justify-s': 'justify-self',
-  );
-}
