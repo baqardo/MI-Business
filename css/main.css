@@ -144,9 +144,22 @@ ul {
   grid-column: 13/17;
 }
 
+.l-expertise {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+.l-expertise .expertise__header {
+  grid-column: 7/11;
+  grid-row: 1;
+}
+.l-expertise .expertise__content {
+  grid-column: 4/14;
+  grid-row: 2;
+}
+
 .nav {
   z-index: 1;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 .nav--skin {
   text-transform: uppercase;
@@ -273,28 +286,14 @@ ul {
   letter-spacing: -2px;
   margin-bottom: 100px;
 }
+.cta__content {
+  margin-bottom: 70px;
+}
 .cta__content--skin {
   font-size: 18px;
   font-weight: normal;
   line-height: 32px;
   letter-spacing: -0.5px;
-}
-.cta__btn {
-  transition: all 0.4s;
-  margin-top: 70px;
-  padding: 20px 80px;
-}
-.cta__btn:hover {
-  filter: invert(1);
-}
-.cta__btn--skin {
-  border: 1.5px solid rgba(255, 255, 255, 0.15);
-  border-radius: 32px;
-  background-color: black;
-  font-size: 12px;
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
 }
 
 .video {
@@ -367,6 +366,89 @@ ul {
   width: 55px;
   height: 55px;
   content: "";
+}
+
+.expertise {
+  margin: 100px 0;
+}
+.expertise__header {
+  margin-bottom: 50px;
+}
+.expertise__main {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1.3px;
+  text-align: center;
+}
+.expertise__sub {
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+.expertise__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 60px 65px rgba(15, 17, 32, 0.1);
+  background-color: white;
+}
+.expertise__icon {
+  width: 100%;
+}
+.expertise__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 50px;
+}
+.expertise__column:nth-of-type(2) {
+  border-left: 1px solid rgba(15, 17, 32, 0.1);
+  border-right: 1px solid rgba(15, 17, 32, 0.1);
+}
+.expertise__title {
+  margin-top: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+}
+.expertise__text {
+  margin-top: 20px;
+  margin-bottom: 150px;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+.expertise__btn {
+  margin-top: 100px;
+}
+
+.btn {
+  transition: all 0.4s;
+  padding: 20px 80px;
+}
+.btn:hover {
+  filter: invert(1);
+  cursor: pointer;
+}
+.btn--skin {
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 32px;
+  background-color: black;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+.btn--invert {
+  border: 1.5px solid rgba(15, 17, 32, 0.15);
+  border-radius: 32px;
+  background-color: white;
+  color: #0f1120;
+}
+.btn--small {
+  padding: 15px 60px;
 }
 
 /*# sourceMappingURL=main.css.map */

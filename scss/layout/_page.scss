@@ -63,3 +63,17 @@
     grid-column: 13 / 17;
   }
 }
+
+.l-expertise {
+  @include grid16;
+
+  .expertise__header {
+    grid-column: 7 / 11;
+    grid-row: 1;
+  }
+
+  .expertise__content {
+    grid-column: 4 / 14;
+    grid-row: 2;
+  }
+}

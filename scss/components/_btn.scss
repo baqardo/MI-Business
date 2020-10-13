@@ -1,0 +1,32 @@
+.btn {
+  transition: all 0.4s;
+
+  padding: 20px 80px;
+
+  &:hover {
+    filter: invert(1);
+    cursor: pointer;
+  }
+
+  &--skin {
+    border: 1.5px solid f_color(main, tertiary, 0.15);
+    border-radius: 32px;
+    background-color: f_color(main, secondary-black);
+
+    font-size: 12px;
+    font-weight: bold;
+    color: f_color(font, tertiary);
+    text-transform: uppercase;
+  }
+
+  &--invert {
+    border: 1.5px solid f_color(main, secondary, 0.15);
+    border-radius: 32px;
+    background-color: f_color(main, tertiary);
+    color: f_color(font, secondary);
+  }
+
+  &--small {
+    padding: 15px 60px;
+  }
+}
