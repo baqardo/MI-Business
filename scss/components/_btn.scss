@@ -29,4 +29,8 @@
   &--small {
     padding: 15px 60px;
   }
+
+  &--transparent {
+    background-color: f_color(main, secondary);
+  }
 }

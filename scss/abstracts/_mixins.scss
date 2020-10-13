@@ -22,6 +22,11 @@
   grid-template-columns: repeat(16, 1fr);
 }
 
+@mixin grid18 {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+}
+
 // @mixin z-index($name) {
 //   z-index: f_z-index($name);
 // }

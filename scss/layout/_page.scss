@@ -73,7 +73,24 @@
   }
 
   .expertise__content {
-    grid-column: 4 / 14;
+    grid-column: 3 / 15;
     grid-row: 2;
+  }
+}
+
+.l-services {
+  @include grid18;
+
+  .services__main {
+    grid-column: 7 / 19;
+    grid-row: 1;
+  }
+  .services__boxes {
+    grid-column: 4 / 10;
+    grid-row: 1;
+  }
+  .services__cta {
+    grid-column: 11 / 14;
+    grid-row: 1;
   }
 }

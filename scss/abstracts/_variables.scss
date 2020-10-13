@@ -5,6 +5,8 @@ $color-white: #fff;
 $color-black: #000;
 $color-blue: #1268fe;
 $color-dark-blue: #0f1120;
+$color-navy-blue: #1d1f2d;
+$color-grey: #979797;
 
 $z-index: (
   nav: 1,
@@ -17,10 +19,12 @@ $colors: (
     primary-lighter: color.adjust($color-blue, $lightness: 20%),
     primary-dark: color.adjust($color-blue, $lightness: -10%),
     primary-darker: color.adjust($color-blue, $lightness: -20%),
+    primary-darkest: $color-navy-blue,
     secondary: $color-dark-blue,
     secondary-light: color.adjust($color-blue, $lightness: 10%),
     secondary-black: $color-black,
     tertiary: $color-white,
+    tertiary-dark: $color-grey,
   ),
   font: (
     primary: $color-blue,
