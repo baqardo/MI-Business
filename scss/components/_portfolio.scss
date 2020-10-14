@@ -1,6 +1,8 @@
 .portfolio {
   &__item {
     position: relative;
+    height: 100%;
+    contain: layout;
   }
 
   &__item:hover &__content-wrapper {

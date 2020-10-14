@@ -19,49 +19,44 @@
   }
 
   &__image {
-    transform: translate(-50%, 70%);
+    &-wrapper {
+      position: relative;
 
-    background-image: url(../assets/img/shapes.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+      &::before {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
 
-    width: 600px;
-    height: 420px;
+        transform: rotate(-90deg);
 
-    &::before {
-      position: absolute;
-      bottom: 0;
-      right: 10%;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 32px;
 
-      transform: rotate(-90deg);
+        white-space: pre;
 
-      font-size: 18px;
-      font-weight: 900;
-      line-height: 32px;
+        content: 'Delighting customers in over\A 200 cities in the world.';
+      }
 
-      white-space: pre;
+      &::after {
+        position: absolute;
+        top: -25px;
+        right: -25px;
 
-      content: 'Delighting customers in over\A 200 cities in the world.';
-    }
+        border-radius: 50%;
+        box-shadow: 0 0 40px rgba(black, 0.1);
 
-    &::after {
-      position: absolute;
-      top: -25px;
-      right: -25px;
+        background-color: white;
+        background-image: url(../assets/svg/plus.svg);
+        background-repeat: no-repeat;
+        background-size: 40%;
+        background-position: 50% 50%;
 
-      border-radius: 50%;
-      box-shadow: 0 0 40px rgba(black, 0.1);
+        width: 55px;
+        height: 55px;
 
-      background-color: white;
-      background-image: url(../assets/svg/plus.svg);
-      background-repeat: no-repeat;
-      background-size: 40%;
-      background-position: 50% 50%;
-
-      width: 55px;
-      height: 55px;
-
-      content: '';
+        content: '';
+      }
     }
   }
 }

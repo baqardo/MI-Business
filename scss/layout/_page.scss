@@ -61,6 +61,14 @@
 
   .intro__side {
     grid-column: 13 / 17;
+    grid-row: 1;
+  }
+
+  .intro__image-wrapper {
+    grid-column: 10 / 14;
+    grid-row: 1;
+
+    align-self: center;
   }
 }
 

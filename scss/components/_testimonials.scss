@@ -1,5 +1,17 @@
 .testimonials {
   background-color: f_color(main, secondary);
+  background-image: url(../assets/img/sky.jpg);
+  background-size: cover;
+  background-blend-mode: soft-light;
+
+  &--secondary {
+    background-color: f_color(main, secondary, 0.8);
+    background-image: url(../assets/img/white-suit.jpg), url(../assets/svg/testimonials-decoration.svg);
+    background-size: cover, 50%;
+    background-position: top, center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+  }
 
   &__content {
     @include flex-center;
@@ -60,5 +72,9 @@
       width: 64px;
       height: 64px;
     }
+  }
+
+  &__cta {
+    color: f_color(font, tertiary);
   }
 }
