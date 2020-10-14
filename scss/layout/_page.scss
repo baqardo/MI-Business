@@ -81,7 +81,12 @@
 .l-services {
   @include grid18;
 
-  .services__main {
+  .services__side-background {
+    grid-column: 1 / 7;
+    grid-row: 1;
+  }
+
+  .services__main-background {
     grid-column: 7 / 19;
     grid-row: 1;
   }
@@ -92,5 +97,13 @@
   .services__cta {
     grid-column: 11 / 14;
     grid-row: 1;
+  }
+}
+
+.l-portfolio {
+  @include grid18;
+
+  .portfolio__item {
+    grid-column: span 6;
   }
 }

@@ -1,9 +1,16 @@
 .services {
   background-color: f_color(main, primary);
-  &__main {
+  &__main-background {
     background-color: f_color(main, secondary);
     background-image: url(../assets/svg/services-decoration.svg);
     background-size: cover;
+  }
+
+  &__side-background {
+    background-image: url(../assets/img/workspace.jpg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
   }
 
   &__boxes {
@@ -23,10 +30,12 @@
     align-items: center;
     justify-content: center;
 
-    border-bottom: 1px solid f_color(main, tertiary-dark, 0.1);
-
     width: 50%;
     height: 50%;
+
+    &:first-of-type {
+      border-bottom: 1px solid f_color(main, tertiary-dark, 0.2);
+    }
 
     &--secondary {
       background-color: f_color(main, secondary, 0.8);
