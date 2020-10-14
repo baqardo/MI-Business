@@ -107,3 +107,11 @@
     grid-column: span 6;
   }
 }
+
+.l-testimonials {
+  @include grid16;
+
+  .testimonials__content {
+    grid-column: 5 / 13;
+  }
+}
