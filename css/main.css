@@ -155,7 +155,7 @@ ul {
   grid-template-columns: repeat(16, 1fr);
 }
 .l-expertise .expertise__header {
-  grid-column: 7/11;
+  grid-column: 6/12;
   grid-row: 1;
 }
 .l-expertise .expertise__content {
@@ -198,6 +198,19 @@ ul {
 }
 .l-testimonials .testimonials__content {
   grid-column: 5/13;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+.pricing .pricing__header {
+  grid-column: 6/12;
+  grid-row: 1;
+}
+.pricing .pricing__content {
+  grid-column: 2/16;
+  grid-row: 2;
 }
 
 .nav {
@@ -693,6 +706,84 @@ ul {
 }
 .testimonials__cta {
   color: white;
+}
+
+.pricing {
+  margin: 100px 0;
+}
+.pricing__header {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.pricing__main {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1.3px;
+}
+.pricing__sub {
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+.pricing__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 60px 65px rgba(15, 17, 32, 0.1);
+  background-color: white;
+  text-align: center;
+}
+.pricing__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  background-color: white;
+}
+.pricing__column:nth-of-type(2) {
+  justify-content: center;
+  transform: translateY(-4.54%);
+  box-shadow: 0 40px 56px rgba(15, 17, 32, 0.1);
+  height: 110%;
+}
+.pricing__title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  line-height: 45px;
+}
+.pricing__cost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  background-color: #0f1120;
+  width: 80px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: white;
+}
+.pricing__cost--primary {
+  background-color: #1268fe;
+}
+.pricing__description {
+  margin-bottom: 35px;
+  width: 80%;
+  height: 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.pricing__features {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.pricing__benefit {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(15, 17, 32, 0.1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

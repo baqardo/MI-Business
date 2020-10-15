@@ -76,7 +76,7 @@
   @include grid16;
 
   .expertise__header {
-    grid-column: 7 / 11;
+    grid-column: 6 / 12;
     grid-row: 1;
   }
 
@@ -121,5 +121,19 @@
 
   .testimonials__content {
     grid-column: 5 / 13;
+  }
+}
+
+.pricing {
+  @include grid16;
+
+  .pricing__header {
+    grid-column: 6 / 12;
+    grid-row: 1;
+  }
+
+  .pricing__content {
+    grid-column: 2 / 16;
+    grid-row: 2;
   }
 }

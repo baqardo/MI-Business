@@ -1,0 +1,103 @@
+.pricing {
+  margin: 100px 0;
+
+  &__header {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  &__main {
+    margin-bottom: 30px;
+
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -1.3px;
+  }
+
+  &__sub {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    box-shadow: 0 60px 65px f_color(main, secondary, 0.1);
+    background-color: f_color(main, tertiary);
+
+    text-align: center;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px 0;
+
+    background-color: f_color(main, tertiary);
+
+    &:nth-of-type(2) {
+      justify-content: center;
+      transform: translateY(-4.54%);
+
+      box-shadow: 0 40px 56px f_color(main, secondary, 0.1);
+
+      height: 110%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  &__cost {
+    @include flex-center;
+
+    margin-bottom: 25px;
+    background-color: f_color(main, secondary);
+
+    width: 80px;
+    height: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: f_color(font, tertiary);
+
+    &--primary {
+      background-color: f_color(main, primary);
+    }
+  }
+
+  &__description {
+    margin-bottom: 35px;
+
+    width: 80%;
+    height: 20px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__features {
+    margin-bottom: 30px;
+
+    width: 100%;
+  }
+
+  &__benefit {
+    padding: 20px 0;
+
+    border-bottom: 1px solid f_color(main, secondary, 0.1);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
