@@ -145,7 +145,7 @@ ul {
   grid-row: 1;
 }
 .l-intro .intro__image-wrapper {
-  grid-column: 10/14;
+  grid-column: 10/16;
   grid-row: 1;
   align-self: center;
 }
@@ -209,7 +209,7 @@ ul {
   grid-row: 1;
 }
 .pricing .pricing__content {
-  grid-column: 2/16;
+  grid-column: 3/15;
   grid-row: 2;
 }
 
@@ -388,6 +388,11 @@ ul {
   background-image: url(../assets/svg/intro-decoration.svg);
   background-size: 100%;
   background-repeat: no-repeat;
+}
+.intro__image {
+  width: 100%;
+  min-height: 300px;
+  object-fit: cover;
 }
 .intro__image-wrapper {
   position: relative;
