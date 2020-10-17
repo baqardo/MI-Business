@@ -2,6 +2,8 @@
   background-color: f_color(main, primary);
 
   &--second {
+    padding: 50px 0;
+
     background-color: f_color(main, secondary);
     background-image: url(../assets/img/man-reading.jpg);
     background-size: cover;

@@ -31,7 +31,14 @@
   }
 
   &--transparent {
-    background-color: f_color(main, secondary);
+    background-color: transparent;
+
+    &:hover {
+      filter: none;
+
+      background-color: f_color(main, tertiary);
+      color: f_color(font, secondary);
+    }
   }
 
   &--primary {
@@ -43,9 +50,5 @@
 
       color: f_color(font, secondary);
     }
-  }
-
-  &--no-border {
-    border: none;
   }
 }

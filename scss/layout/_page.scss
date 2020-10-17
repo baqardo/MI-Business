@@ -136,7 +136,7 @@
   }
 }
 
-.pricing {
+.l-pricing {
   @include grid16;
 
   .pricing__header {
@@ -146,6 +146,20 @@
 
   .pricing__content {
     grid-column: 3 / 15;
+    grid-row: 2;
+  }
+}
+
+.l-news {
+  @include grid16;
+
+  .news__header {
+    grid-column: 6 / 12;
+    grid-row: 1;
+  }
+
+  .news__content {
+    grid-column: 1 / 17;
     grid-row: 2;
   }
 }
