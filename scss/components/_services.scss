@@ -1,5 +1,16 @@
 .services {
   background-color: f_color(main, primary);
+
+  &--second {
+    background-color: f_color(main, secondary);
+    background-image: url(../assets/img/man-reading.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+
+    align-items: center;
+  }
+
   &__main-background {
     background-color: f_color(main, secondary);
     background-image: url(../assets/svg/services-decoration.svg);
@@ -85,6 +96,12 @@
 
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  &__phone {
+    &-image {
+      width: 100%;
     }
   }
 }

@@ -184,6 +184,15 @@ ul {
   grid-row: 1;
 }
 
+.l-services--second .services__cta {
+  grid-column: 4/10;
+  grid-row: 1;
+}
+.l-services--second .services__phone {
+  grid-column: 11/16;
+  grid-row: 1;
+}
+
 .l-portfolio {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
@@ -351,6 +360,9 @@ ul {
   line-height: 32px;
   letter-spacing: -0.5px;
 }
+.cta__content--narrow {
+  width: 70%;
+}
 
 .video {
   position: relative;
@@ -517,9 +529,20 @@ ul {
   background-color: white;
   color: #0f1120;
 }
+.btn--no-border {
+  border: none;
+}
 
 .services {
   background-color: #1268fe;
+}
+.services--second {
+  background-color: #0f1120;
+  background-image: url(../assets/img/man-reading.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  align-items: center;
 }
 .services__main-background {
   background-color: #0f1120;
@@ -590,6 +613,9 @@ ul {
 }
 .services__play:hover {
   cursor: pointer;
+}
+.services__phone-image {
+  width: 100%;
 }
 
 .portfolio__item {

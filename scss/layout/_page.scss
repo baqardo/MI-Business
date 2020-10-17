@@ -108,6 +108,18 @@
   }
 }
 
+.l-services--second {
+  .services__cta {
+    grid-column: 4 / 10;
+    grid-row: 1;
+  }
+
+  .services__phone {
+    grid-column: 11 / 16;
+    grid-row: 1;
+  }
+}
+
 .l-portfolio {
   @include grid18;
 
