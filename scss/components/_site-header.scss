@@ -12,4 +12,11 @@
   &__cta {
     padding-bottom: 200px;
   }
+
+  &__video {
+    background-image: url(../assets/img/header-video.jpg);
+    background-color: f_color(main, primary);
+    background-size: cover;
+    background-blend-mode: soft-light;
+  }
 }

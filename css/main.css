@@ -84,6 +84,10 @@ ul {
   list-style: none;
 }
 
+input:focus {
+  outline: none;
+}
+
 * {
   font-family: Dosis;
 }
@@ -107,7 +111,7 @@ ul {
 .l-nav .nav__list {
   grid-column: 5/12;
 }
-.l-nav .nav__user {
+.l-nav .nav__contact {
   grid-column: 13/17;
 }
 
@@ -235,6 +239,17 @@ ul {
   grid-row: 2;
 }
 
+.l-contact {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+.l-contact .contact__main {
+  grid-column: 1/10;
+}
+.l-contact .contact__side {
+  grid-column: 11/17;
+}
+
 .nav {
   z-index: 1;
   padding: 20px 0;
@@ -248,7 +263,7 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-.nav__user {
+.nav__contact {
   display: flex;
   justify-content: flex-end;
 }
@@ -256,7 +271,7 @@ ul {
 .nav__link {
   transition: all 0.4s;
 }
-.nav__link:hover:not(.nav__link--active):not(.nav__link--register) {
+.nav__link:hover:not(.nav__link--active):not(.nav__link--contact) {
   color: #0151dc;
 }
 .nav__link--skin {
@@ -283,17 +298,11 @@ ul {
   font-weight: bold;
   letter-spacing: 3px;
 }
-.nav__btn--login {
-  border: 1px solid rgba(15, 17, 32, 0.3);
-}
-.nav__btn--login:hover {
-  border: 1px solid rgba(1, 81, 220, 0.6);
-}
-.nav__btn--register {
+.nav__btn--contact {
   background-color: #1268fe;
   color: white;
 }
-.nav__btn--register:hover {
+.nav__btn--contact:hover {
   background-color: #013ea9;
 }
 .nav__btn-wrapper {
@@ -318,6 +327,12 @@ ul {
 }
 .site-header__cta {
   padding-bottom: 200px;
+}
+.site-header__video {
+  background-image: url(../assets/img/header-video.jpg);
+  background-color: #1268fe;
+  background-size: cover;
+  background-blend-mode: soft-light;
 }
 
 .social-media__item {
@@ -379,10 +394,6 @@ ul {
 
 .video {
   position: relative;
-  background-image: url(../assets/img/header-video.jpg);
-  background-color: #1268fe;
-  background-size: cover;
-  background-blend-mode: soft-light;
   padding: 50% 0;
 }
 .video__play {
@@ -395,6 +406,9 @@ ul {
 }
 .video__play:hover {
   cursor: pointer;
+}
+.video--full-height {
+  height: 100%;
 }
 
 .intro {
@@ -509,7 +523,7 @@ ul {
   transition: all 0.4s;
   padding: 20px 80px;
 }
-.btn:hover {
+.btn:hover, .btn:focus {
   filter: invert(1);
   cursor: pointer;
 }
@@ -524,7 +538,6 @@ ul {
 }
 .btn--invert {
   border: 1.5px solid rgba(15, 17, 32, 0.15);
-  border-radius: 32px;
   background-color: white;
   color: #0f1120;
 }
@@ -534,7 +547,7 @@ ul {
 .btn--transparent {
   background-color: transparent;
 }
-.btn--transparent:hover {
+.btn--transparent:hover, .btn--transparent:focus {
   filter: none;
   background-color: white;
   color: #0f1120;
@@ -542,10 +555,13 @@ ul {
 .btn--primary {
   background-color: #1268fe;
 }
-.btn--primary:hover {
+.btn--primary:hover, .btn--primary:focus {
   filter: none;
   background-color: white;
   color: #0f1120;
+}
+.btn--full-width {
+  width: 100%;
 }
 
 .services {
@@ -889,14 +905,14 @@ ul {
   padding: 0 10px;
 }
 .news__image {
-  transition: all 0.6s;
+  transition: all 0.8s;
   min-width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: right;
 }
 .news__image-wrapper {
-  transition: height 0.4s;
+  transition: height 0.6s;
   overflow: hidden;
   width: 100%;
   height: 50%;
@@ -925,6 +941,51 @@ ul {
 .news__text {
   transition: all 0.6s 0.4s;
   margin: 20px 0;
+}
+
+.contact {
+  background-color: white;
+}
+.contact__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 150px 0;
+}
+.contact__video {
+  background-image: url(../assets/img/person.jpg);
+  background-color: #1268fe;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+.contact__form {
+  width: 60%;
+}
+.contact__header {
+  font-size: 72px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+.contact__text {
+  margin: 50px 0;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+.contact__input {
+  display: block;
+  margin: 20px 0;
+  padding: 15px 30px;
+  border: 1.5px solid rgba(15, 17, 32, 0.15);
+  border-radius: 32px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0f1120;
+  transition: all 0.4s;
+}
+.contact__input:focus, .contact__input:hover {
+  border: 1.5px solid rgba(15, 17, 32, 0.6);
 }
 
 /*# sourceMappingURL=main.css.map */

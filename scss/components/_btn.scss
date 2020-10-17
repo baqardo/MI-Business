@@ -3,7 +3,8 @@
 
   padding: 20px 80px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     filter: invert(1);
     cursor: pointer;
   }
@@ -21,7 +22,6 @@
 
   &--invert {
     border: 1.5px solid f_color(main, secondary, 0.15);
-    border-radius: 32px;
     background-color: f_color(main, tertiary);
     color: f_color(font, secondary);
   }
@@ -33,7 +33,8 @@
   &--transparent {
     background-color: transparent;
 
-    &:hover {
+    &:hover,
+    &:focus {
       filter: none;
 
       background-color: f_color(main, tertiary);
@@ -44,11 +45,16 @@
   &--primary {
     background-color: f_color(main, primary);
 
-    &:hover {
+    &:hover,
+    &:focus {
       filter: none;
       background-color: f_color(main, tertiary);
 
       color: f_color(font, secondary);
     }
+  }
+
+  &--full-width {
+    width: 100%;
   }
 }

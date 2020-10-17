@@ -1,11 +1,6 @@
 .video {
   position: relative;
 
-  background-image: url(../assets/img/header-video.jpg);
-  background-color: f_color(main, primary);
-  background-size: cover;
-  background-blend-mode: soft-light;
-
   padding: 50% 0;
 
   &__play {
@@ -16,5 +11,9 @@
     &:hover {
       cursor: pointer;
     }
+  }
+
+  &--full-height {
+    height: 100%;
   }
 }

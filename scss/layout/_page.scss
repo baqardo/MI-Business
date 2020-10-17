@@ -20,7 +20,7 @@
     grid-column: 5 / 12;
   }
 
-  .nav__user {
+  .nav__contact {
     grid-column: 13 / 17;
   }
 }
@@ -161,5 +161,16 @@
   .news__content {
     grid-column: 1 / 17;
     grid-row: 2;
+  }
+}
+.l-contact {
+  @include grid16;
+
+  .contact__main {
+    grid-column: 1 / 10;
+  }
+
+  .contact__side {
+    grid-column: 11 / 17;
   }
 }

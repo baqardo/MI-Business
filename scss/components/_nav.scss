@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
   }
-  &__user {
+  &__contact {
     display: flex;
     justify-content: flex-end;
   }
@@ -22,7 +22,7 @@
 .nav__link {
   transition: all 0.4s;
 
-  &:hover:not(&--active):not(&--register) {
+  &:hover:not(&--active):not(&--contact) {
     color: f_color(font, primary-dark);
   }
 
@@ -56,15 +56,7 @@
     letter-spacing: 3px;
   }
 
-  &--login {
-    border: 1px solid f_color(main, secondary, $alpha: 0.3);
-
-    &:hover {
-      border: 1px solid f_color(main, primary-dark, $alpha: 0.6);
-    }
-  }
-
-  &--register {
+  &--contact {
     background-color: f_color(main, primary);
 
     color: f_color(font, tertiary);

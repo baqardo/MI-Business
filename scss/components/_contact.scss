@@ -1,0 +1,56 @@
+.contact {
+  background-color: f_color(main, tertiary);
+
+  &__main {
+    @include flex-center;
+    margin: 150px 0;
+  }
+
+  &__video {
+    background-image: url(../assets/img/person.jpg);
+    background-color: f_color(main, primary);
+    background-size: cover;
+    background-blend-mode: soft-light;
+  }
+
+  &__form {
+    width: 60%;
+  }
+
+  &__header {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: -2px;
+  }
+
+  &__text {
+    margin: 50px 0;
+
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  &__input {
+    display: block;
+
+    margin: 20px 0;
+    padding: 15px 30px;
+
+    border: 1.5px solid f_color(main, secondary, 0.15);
+    border-radius: 32px;
+
+    width: 100%;
+
+    font-size: 12px;
+    font-weight: bold;
+    color: f_color(font, secondary);
+
+    transition: all 0.4s;
+
+    &:focus,
+    &:hover {
+      border: 1.5px solid f_color(main, secondary, 0.6);
+    }
+  }
+}
