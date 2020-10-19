@@ -22,7 +22,8 @@
 .nav__link {
   transition: all 0.4s;
 
-  &:hover:not(&--active):not(&--contact) {
+  &:hover:not(&--contact),
+  &:focus:not(&--contact) {
     color: f_color(font, primary-dark);
   }
 
@@ -61,7 +62,8 @@
 
     color: f_color(font, tertiary);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: f_color(main, primary-darker);
     }
   }

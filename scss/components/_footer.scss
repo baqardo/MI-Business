@@ -32,7 +32,8 @@
 
     transition: all 0.4s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: f_color(font, primary);
     }
 

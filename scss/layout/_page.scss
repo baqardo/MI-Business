@@ -6,7 +6,7 @@
   @include grid16;
   align-items: center;
 
-  position: fixed;
+  position: absolute;
   top: 0;
 
   width: 100%;
@@ -198,7 +198,7 @@
   }
 
   .footer__copyright {
-    grid-column: 10 / 16;
+    grid-column: 8 / 16;
     justify-self: end;
   }
 }
