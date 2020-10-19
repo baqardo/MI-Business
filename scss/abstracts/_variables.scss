@@ -31,5 +31,6 @@ $colors: (
     primary-dark: color.adjust($color-blue, $lightness: -10%),
     secondary: $color-dark-blue,
     tertiary: $color-white,
+    tertiary-dark: $color-grey,
   ),
 );
