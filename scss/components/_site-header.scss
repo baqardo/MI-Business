@@ -1,13 +1,9 @@
 .site-header {
-  padding-top: 150px;
-
-  &--skin {
-    background-color: #fff;
-    background-image: url(../assets/svg/header-decoration.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 100% center;
-  }
+  background-color: #fff;
+  background-image: url(../assets/svg/header-decoration.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% center;
 
   &__cta {
     padding-bottom: 200px;
@@ -18,5 +14,10 @@
     background-color: f_color(main, primary);
     background-size: cover;
     background-blend-mode: soft-light;
+  }
+
+  &__nav {
+    padding-top: 30px;
+    padding-bottom: 80px;
   }
 }

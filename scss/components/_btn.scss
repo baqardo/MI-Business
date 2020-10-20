@@ -3,14 +3,12 @@
 
   padding: 20px 80px;
 
-  &:hover,
-  &:focus {
-    filter: invert(1);
+  &:hover {
     cursor: pointer;
   }
 
   &--skin {
-    border: 1.5px solid f_color(main, tertiary, 0.15);
+    border: 1.5px solid f_color(main, tertiary-dark, 0.3);
     border-radius: 32px;
     background-color: f_color(main, secondary-black);
 
@@ -18,12 +16,23 @@
     font-weight: bold;
     color: f_color(font, tertiary);
     text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: f_color(main, tertiary);
+      color: f_color(font, secondary);
+    }
   }
 
   &--invert {
-    border: 1.5px solid f_color(main, secondary, 0.15);
     background-color: f_color(main, tertiary);
     color: f_color(font, secondary);
+
+    &:hover,
+    &:focus {
+      background-color: f_color(main, secondary-black);
+      color: f_color(font, tertiary);
+    }
   }
 
   &--small {
@@ -35,8 +44,6 @@
 
     &:hover,
     &:focus {
-      filter: none;
-
       background-color: f_color(main, tertiary);
       color: f_color(font, secondary);
     }
@@ -47,7 +54,6 @@
 
     &:hover,
     &:focus {
-      filter: none;
       background-color: f_color(main, tertiary);
 
       color: f_color(font, secondary);

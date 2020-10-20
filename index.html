@@ -13,39 +13,37 @@
   </head>
   <body>
     <div class="l-page">
-      <nav class="nav nav--skin l-nav">
-        <div class="nav__logo">
-          <div class="logo-wrapper">
-            <div class="logo logo--skin">Mi Business</div>
-          </div>
+      <header id="home" class="site-header l-site-header">
+        <div class="site-header__nav">
+          <nav class="nav l-nav">
+            <div class="nav__logo">
+              <div class="logo">Mi Business</div>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__link">
+                <a href="#home" class="link">Home</a>
+              </li>
+              <li class="nav__link">
+                <a href="#about" class="link">About</a>
+              </li>
+              <li class="nav__link">
+                <a href="#projects" class="link">Projects</a>
+              </li>
+              <li class="nav__link">
+                <a href="#services" class="link">Services</a>
+              </li>
+              <li class="nav__link">
+                <a href="#article" class="link">Article</a>
+              </li>
+              <li class="nav__link">
+                <a href="#testimonial" class="link">Testimonial</a>
+              </li>
+              <li class="nav__btn">
+                <a href="#contact" class="link">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="nav__list">
-          <div class="nav__link-wrapper">
-            <a href="#home" class="nav__link nav__link--skin">Home</a>
-          </div>
-          <div class="nav__link-wrapper">
-            <a href="#about" class="nav__link nav__link--skin">About</a>
-          </div>
-          <div class="nav__link-wrapper">
-            <a href="#projects" class="nav__link nav__link--skin">Projects</a>
-          </div>
-          <div class="nav__link-wrapper">
-            <a href="#services" class="nav__link nav__link--skin">Services</a>
-          </div>
-          <div class="nav__link-wrapper">
-            <a href="#article" class="nav__link nav__link--skin">Article</a>
-          </div>
-          <div class="nav__link-wrapper">
-            <a href="#contact" class="nav__link nav__link--skin">Contact</a>
-          </div>
-        </div>
-        <div class="nav__contact">
-          <div class="nav__btn-wrapper">
-            <a href="#contact" class="nav__btn nav__btn--skin nav__btn--contact">Contact</a>
-          </div>
-        </div>
-      </nav>
-      <header id="home" class="site-header site-header--skin l-header">
         <div class="site-header__media">
           <div class="social-media">
             <a href="#" class="social-media__item social-media__item--skin">
@@ -316,7 +314,7 @@
           </div>
         </div>
       </section>
-      <section class="testimonials l-testimonials">
+      <section id="testimonial" class="testimonials l-testimonials">
         <div class="testimonials__content">
           <h2 class="header__secondary">What Customer Says</h2>
           <div class="testimonials__opinion">
@@ -461,7 +459,7 @@
                 </p>
               </div>
               <div class="news__btn">
-                <button class="btn btn--skin btn--primary">Read More</button>
+                <div class="btn btn--skin btn--primary">Read More</div>
               </div>
             </div>
           </li>
@@ -483,7 +481,7 @@
                 </p>
               </div>
               <div class="news__btn">
-                <button class="btn btn--skin btn--primary">Read More</button>
+                <div class="btn btn--skin btn--primary">Read More</div>
               </div>
             </div>
           </li>
@@ -505,7 +503,7 @@
                 </p>
               </div>
               <div class="news__btn">
-                <button class="btn btn--skin btn--primary">Read More</button>
+                <div class="btn btn--skin btn--primary">Read More</div>
               </div>
             </div>
           </li>
@@ -527,7 +525,7 @@
                 </p>
               </div>
               <div class="news__btn">
-                <button class="btn btn--skin btn--primary">Read More</button>
+                <div class="btn btn--skin btn--primary">Read More</div>
               </div>
             </div>
           </li>
@@ -549,7 +547,7 @@
                 </p>
               </div>
               <div class="news__btn">
-                <button class="btn btn--skin btn--primary">Read More</button>
+                <div class="btn btn--skin btn--primary">Read More</div>
               </div>
             </div>
           </li>
@@ -602,25 +600,28 @@
       </section>
       <footer class="footer">
         <div class="footer__top l-footer__top">
-          <nav class="footer__nav">
+          <nav class="nav">
             <div class="nav__list">
-              <div class="nav__link-wrapper">
-                <a href="#home" class="nav__link nav__link--skin">Home</a>
+              <div class="nav__link">
+                <a href="#home" class="link">Home</a>
               </div>
-              <div class="nav__link-wrapper">
-                <a href="#about" class="nav__link nav__link--skin">About</a>
+              <div class="nav__link">
+                <a href="#about" class="link">About</a>
               </div>
-              <div class="nav__link-wrapper">
-                <a href="#projects" class="nav__link nav__link--skin">Projects</a>
+              <div class="nav__link">
+                <a href="#projects" class="link">Projects</a>
               </div>
-              <div class="nav__link-wrapper">
-                <a href="#services" class="nav__link nav__link--skin">Services</a>
+              <div class="nav__link">
+                <a href="#services" class="link">Services</a>
               </div>
-              <div class="nav__link-wrapper">
-                <a href="#article" class="nav__link nav__link--skin">Article</a>
+              <div class="nav__link">
+                <a href="#article" class="link">Article</a>
               </div>
-              <div class="nav__link-wrapper">
-                <a href="#contact" class="nav__link nav__link--skin">Contact</a>
+              <div class="nav__link">
+                <a href="#testimonial" class="link">Testimonial</a>
+              </div>
+              <div class="nav__link">
+                <a href="#contact" class="link">Contact</a>
               </div>
             </div>
           </nav>
@@ -644,9 +645,7 @@
         </div>
         <div class="footer__bottom l-footer__bottom">
           <div class="footer__logo">
-            <div class="logo-wrapper">
-              <div href="#" class="logo logo--skin logo--white">Mi Business</div>
-            </div>
+            <div class="logo">Mi Business</div>
           </div>
           <div class="footer__copyright">
             <p class="text__tertiary">
