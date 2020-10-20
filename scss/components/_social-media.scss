@@ -1,27 +1,15 @@
 .social-media {
-  &__item {
-    display: block;
-    transition: all 0.4s ease-in-out;
-
-    padding: 20px;
+  &__button {
     margin-top: 30px;
+  }
+
+  &__link {
+    margin: 0 20px;
+    transition: all 0.4s ease-in-out;
 
     &:hover,
     &:focus {
-      filter: invert(1);
-    }
-
-    &--skin {
-      border-radius: 50%;
-      border: 1px solid f_color(main, secondary, 0.15);
-      background-color: f_color(main, tertiary);
-    }
-
-    &--twitter {
-      background-color: f_color(main, secondary-black);
-      border: 1px solid f_color(main, tertiary, 0.15);
-
-      color: f_color(font, tertiary);
+      color: f_color(font, primary);
     }
   }
 

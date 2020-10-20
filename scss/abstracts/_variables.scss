@@ -30,6 +30,7 @@ $colors: (
     primary: $color-blue,
     primary-dark: color.adjust($color-blue, $lightness: -10%),
     secondary: $color-dark-blue,
+    secondary-black: $color-black,
     tertiary: $color-white,
     tertiary-dark: $color-grey,
   ),

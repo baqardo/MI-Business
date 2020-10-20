@@ -20,20 +20,5 @@
   &__btn {
     margin-left: auto;
     margin-right: 60px;
-
-    color: f_color(font, tertiary);
-
-    .link {
-      transition: all 0.4s;
-
-      padding: 10px;
-      background-color: f_color(main, primary);
-
-      &:hover,
-      &:focus {
-        background-color: f_color(main, primary-darker);
-        cursor: pointer;
-      }
-    }
   }
 }

@@ -1,32 +1,59 @@
 .btn {
-  transition: all 0.4s;
+  transition: all 0.4s ease-in-out;
 
   padding: 20px 80px;
+
+  border: 1.5px solid f_color(main, tertiary-dark, 0.3);
+
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
 
   &:hover {
     cursor: pointer;
   }
 
-  &--skin {
-    border: 1.5px solid f_color(main, tertiary-dark, 0.3);
-    border-radius: 32px;
-    background-color: f_color(main, secondary-black);
+  &--link {
+    padding: 10px;
+  }
 
-    font-size: 12px;
-    font-weight: bold;
+  &--round {
+    display: block;
+    padding: 20px;
+    border-radius: 50%;
+  }
+
+  &--rounded {
+    padding: 20px 80px;
+    border-radius: 32px;
+  }
+
+  &--primary {
+    background-color: f_color(main, primary);
     color: f_color(font, tertiary);
-    text-transform: uppercase;
 
     &:hover,
     &:focus {
       background-color: f_color(main, tertiary);
-      color: f_color(font, secondary);
+      color: f_color(font, secondary-black);
     }
   }
 
-  &--invert {
+  &--secondary {
+    background-color: f_color(main, secondary-black);
+    color: f_color(font, tertiary);
+
+    &:hover,
+    &:focus {
+      background-color: f_color(main, tertiary);
+      color: f_color(font, secondary-black);
+    }
+  }
+
+  &--tertiary {
     background-color: f_color(main, tertiary);
-    color: f_color(font, secondary);
+    color: f_color(font, secondary-black);
 
     &:hover,
     &:focus {
@@ -35,32 +62,18 @@
     }
   }
 
-  &--small {
-    padding: 15px 60px;
-  }
-
   &--transparent {
     background-color: transparent;
 
     &:hover,
     &:focus {
       background-color: f_color(main, tertiary);
-      color: f_color(font, secondary);
-    }
-  }
-
-  &--primary {
-    background-color: f_color(main, primary);
-
-    &:hover,
-    &:focus {
-      background-color: f_color(main, tertiary);
-
-      color: f_color(font, secondary);
+      color: f_color(font, secondary-black);
     }
   }
 
   &--full-width {
+    display: block;
     width: 100%;
   }
 }

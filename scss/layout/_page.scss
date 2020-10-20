@@ -170,7 +170,7 @@
   }
 }
 
-.l-footer__top {
+.l-footer__links {
   @include grid16;
   align-items: center;
 
@@ -178,13 +178,13 @@
     grid-column: 2 / 10;
   }
 
-  .footer__media-wrapper {
+  .footer__media {
     grid-column: 12 / 16;
     justify-self: right;
   }
 }
 
-.l-footer__bottom {
+.l-footer__info {
   @include grid16;
   align-items: center;
 
@@ -193,7 +193,7 @@
   }
 
   .footer__copyright {
-    grid-column: 8 / 16;
+    grid-column: 7 / 16;
     justify-self: end;
   }
 }

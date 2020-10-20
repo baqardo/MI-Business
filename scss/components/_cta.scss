@@ -1,19 +1,19 @@
 .cta {
   color: f_color(font, tertiary);
 
-  &--main {
+  &--black {
     color: f_color(font, secondary);
   }
 
-  &__header {
+  &__title {
     margin-bottom: 50px;
   }
 
-  &__content {
+  &__text {
     margin-bottom: 70px;
 
     &--narrow {
-      width: 70%;
+      width: 80%;
     }
   }
 }
