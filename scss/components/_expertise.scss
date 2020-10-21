@@ -1,9 +1,10 @@
 .expertise {
   margin: 100px 0;
 
+  text-align: center;
+
   &__header {
     margin-bottom: 50px;
-    text-align: center;
   }
 
   &__main {
@@ -23,13 +24,7 @@
   }
 
   &__column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     padding: 70px 50px;
-
-    text-align: center;
 
     &:nth-of-type(2) {
       border-left: 1px solid f_color(main, secondary, 0.1);
@@ -43,10 +38,6 @@
 
   &__text {
     margin-top: 20px;
-    margin-bottom: 150px;
-  }
-
-  &__btn {
-    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }

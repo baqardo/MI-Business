@@ -1,9 +1,9 @@
 .pricing {
   margin: 100px 0;
+  text-align: center;
 
   &__header {
     margin-bottom: 80px;
-    text-align: center;
   }
 
   &__main {
@@ -16,8 +16,6 @@
 
     box-shadow: 0 60px 65px f_color(main, secondary, 0.1);
     background-color: f_color(main, tertiary);
-
-    text-align: center;
   }
 
   &__column {

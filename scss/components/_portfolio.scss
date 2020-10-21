@@ -2,7 +2,6 @@
   &__item {
     position: relative;
     height: 100%;
-    contain: layout;
   }
 
   &__item:hover &__content-wrapper {
@@ -52,8 +51,6 @@
     &-wrapper {
       width: 100%;
       height: 100%;
-
-      overflow: hidden;
     }
   }
 }

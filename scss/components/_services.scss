@@ -1,6 +1,4 @@
 .services {
-  background-color: f_color(main, primary);
-
   &--second {
     padding: 50px 0;
 
@@ -28,8 +26,6 @@
 
   &__boxes {
     display: flex;
-    align-items: center;
-    justify-content: center;
     justify-self: center;
     align-self: center;
     flex-wrap: wrap;
@@ -39,9 +35,7 @@
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
 
     width: 50%;
     height: 50%;
@@ -80,22 +74,16 @@
 
   &__cta {
     margin: 300px 0;
-    margin-left: 50px;
   }
 
   &__play {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
 
     border-radius: 50%;
     background-color: f_color(main, tertiary);
 
     width: 160px;
     height: 160px;
-
-    font-size: 16px;
-    letter-spacing: -0.45px;
 
     &:hover {
       cursor: pointer;

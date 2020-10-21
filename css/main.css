@@ -147,7 +147,7 @@ input:focus {
   justify-self: center;
 }
 .l-nav .nav__list {
-  grid-column: 5/17;
+  grid-column: 4/17;
 }
 
 .l-site-header {
@@ -163,7 +163,7 @@ input:focus {
   align-self: start;
 }
 .l-site-header .site-header__cta {
-  grid-column: 5/12;
+  grid-column: 4/11;
 }
 .l-site-header .site-header__video {
   grid-column: 13/17;
@@ -174,16 +174,16 @@ input:focus {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
 }
-.l-intro .intro__background {
+.l-intro .intro__main-background {
   grid-column: 1/13;
   grid-row: 1;
 }
-.l-intro .intro__cta {
-  grid-column: 5/8;
+.l-intro .intro__side-background {
+  grid-column: 13/17;
   grid-row: 1;
 }
-.l-intro .intro__side {
-  grid-column: 13/17;
+.l-intro .intro__cta {
+  grid-column: 4/8;
   grid-row: 1;
 }
 .l-intro .intro__image-wrapper {
@@ -198,11 +198,9 @@ input:focus {
 }
 .l-expertise .expertise__header {
   grid-column: 6/12;
-  grid-row: 1;
 }
 .l-expertise .expertise__content {
   grid-column: 3/15;
-  grid-row: 2;
 }
 
 .l-services {
@@ -214,7 +212,7 @@ input:focus {
   grid-row: 1;
 }
 .l-services .services__main-background {
-  grid-column: 7/19;
+  grid-column: 7/-1;
   grid-row: 1;
 }
 .l-services .services__boxes {
@@ -222,16 +220,20 @@ input:focus {
   grid-row: 1;
 }
 .l-services .services__cta {
-  grid-column: 11/15;
+  grid-column: 12/16;
   grid-row: 1;
 }
 
+.l-services--second {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
 .l-services--second .services__cta {
-  grid-column: 4/10;
+  grid-column: 3/7;
   grid-row: 1;
 }
 .l-services--second .services__phone {
-  grid-column: 11/16;
+  grid-column: 9/14;
   grid-row: 1;
 }
 
@@ -342,7 +344,7 @@ input:focus {
 }
 
 .site-header {
-  background-color: #fff;
+  background-color: white;
   background-image: url(../assets/svg/header-decoration.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -413,41 +415,35 @@ input:focus {
   height: 100%;
 }
 
-.intro {
-  background-color: #fff;
-}
-.intro__background {
+.intro__main-background {
   background-color: #1268fe;
   background-image: url(../assets/img/workspace.jpg);
   background-size: cover;
   background-blend-mode: soft-light;
 }
-.intro__cta {
-  padding: 200px 0;
-}
-.intro__side {
+.intro__side-background {
+  background-color: white;
   background-image: url(../assets/svg/intro-decoration.svg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.intro__image {
-  width: 100%;
-  min-height: 300px;
-  object-fit: cover;
+.intro__cta {
+  padding: 200px 0;
 }
-.intro__image-wrapper {
-  position: relative;
-}
-.intro__image-wrapper::before {
+.intro__caption {
   position: absolute;
   bottom: 0;
   right: 10%;
   transform: rotate(-90deg);
-  font-size: 18px;
   font-weight: 900;
-  line-height: 32px;
-  white-space: pre;
-  content: "Delighting customers in over\a 200 cities in the world.";
+}
+.intro__image {
+  width: 100%;
+  object-fit: cover;
+  min-height: 300px;
+}
+.intro__image-wrapper {
+  position: relative;
 }
 .intro__image-wrapper::after {
   position: absolute;
@@ -467,10 +463,10 @@ input:focus {
 
 .expertise {
   margin: 100px 0;
+  text-align: center;
 }
 .expertise__header {
   margin-bottom: 50px;
-  text-align: center;
 }
 .expertise__main {
   margin-bottom: 30px;
@@ -485,11 +481,7 @@ input:focus {
   width: 100%;
 }
 .expertise__column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 70px 50px;
-  text-align: center;
 }
 .expertise__column:nth-of-type(2) {
   border-left: 1px solid rgba(15, 17, 32, 0.1);
@@ -500,10 +492,7 @@ input:focus {
 }
 .expertise__text {
   margin-top: 20px;
-  margin-bottom: 150px;
-}
-.expertise__btn {
-  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .btn {
@@ -566,9 +555,6 @@ input:focus {
   width: 100%;
 }
 
-.services {
-  background-color: #1268fe;
-}
 .services--second {
   padding: 50px 0;
   background-color: #0f1120;
@@ -591,8 +577,6 @@ input:focus {
 }
 .services__boxes {
   display: flex;
-  align-items: center;
-  justify-content: center;
   justify-self: center;
   align-self: center;
   flex-wrap: wrap;
@@ -633,7 +617,6 @@ input:focus {
 }
 .services__cta {
   margin: 300px 0;
-  margin-left: 50px;
 }
 .services__play {
   display: flex;
@@ -643,8 +626,6 @@ input:focus {
   background-color: white;
   width: 160px;
   height: 160px;
-  font-size: 16px;
-  letter-spacing: -0.45px;
 }
 .services__play:hover {
   cursor: pointer;
@@ -656,7 +637,6 @@ input:focus {
 .portfolio__item {
   position: relative;
   height: 100%;
-  contain: layout;
 }
 .portfolio__item:hover .portfolio__content-wrapper {
   opacity: 1;
@@ -697,7 +677,6 @@ input:focus {
 .portfolio__image-wrapper {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .testimonials {
@@ -723,11 +702,6 @@ input:focus {
   color: white;
   text-align: center;
 }
-.testimonials__header {
-  font-size: 42px;
-  font-weight: bold;
-  letter-spacing: -1.35px;
-}
 .testimonials__opinion {
   margin-top: 60px;
 }
@@ -740,14 +714,7 @@ input:focus {
 }
 .testimonials__name {
   margin-top: 20px;
-  font-size: 18px;
   font-weight: bold;
-  letter-spacing: -0.5px;
-}
-.testimonials__title {
-  margin-top: 10px;
-  font-size: 14px;
-  letter-spacing: -0.4px;
 }
 .testimonials__image {
   width: 100%;
@@ -766,10 +733,10 @@ input:focus {
 
 .pricing {
   margin: 100px 0;
+  text-align: center;
 }
 .pricing__header {
   margin-bottom: 80px;
-  text-align: center;
 }
 .pricing__main {
   margin-bottom: 30px;
@@ -779,7 +746,6 @@ input:focus {
   grid-template-columns: repeat(3, 1fr);
   box-shadow: 0 60px 65px rgba(15, 17, 32, 0.1);
   background-color: white;
-  text-align: center;
 }
 .pricing__column {
   display: flex;
@@ -832,19 +798,19 @@ input:focus {
 
 .news {
   padding: 100px 0;
+  text-align: center;
 }
 .news__header {
   margin-bottom: 80px;
-  text-align: center;
 }
 .news__main {
   margin-bottom: 30px;
 }
 .news__content {
   display: flex;
-  overflow: hidden;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .news__card {
   padding: 15px;
@@ -882,19 +848,12 @@ input:focus {
   min-width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right;
 }
 .news__image-wrapper {
-  transition: height 0.6s;
+  transition: all 0.6s;
   overflow: hidden;
   width: 100%;
   height: 50%;
-}
-.news__title {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 32px;
-  letter-spacing: -0.55px;
 }
 .news__description {
   margin-top: 10px;
@@ -934,16 +893,8 @@ input:focus {
 .contact__form {
   width: 60%;
 }
-.contact__header {
-  font-size: 72px;
-  font-weight: bold;
-  letter-spacing: -2px;
-}
 .contact__text {
   margin: 50px 0;
-  font-size: 18px;
-  line-height: 32px;
-  letter-spacing: -0.5px;
 }
 .contact__input {
   display: block;
@@ -977,6 +928,17 @@ input:focus {
 .footer__info {
   padding: 20px 0;
   background-color: #0f1120;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.filler {
+  position: absolute;
+  width: 100%;
+  padding-bottom: 56.25%;
 }
 
 /*# sourceMappingURL=main.css.map */
