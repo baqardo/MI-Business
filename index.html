@@ -13,8 +13,8 @@
   </head>
   <body>
     <div class="l-page">
-      <header id="home" class="site-header l-site-header">
-        <div class="site-header__nav">
+      <header id="home" class="home l-home">
+        <div class="home__nav">
           <nav class="nav l-nav">
             <div class="nav__logo">
               <div class="logo">Mi Business</div>
@@ -27,10 +27,10 @@
                 <a href="#about" class="link">About</a>
               </li>
               <li class="nav__link">
-                <a href="#projects" class="link">Projects</a>
+                <a href="#services" class="link">Services</a>
               </li>
               <li class="nav__link">
-                <a href="#services" class="link">Services</a>
+                <a href="#projects" class="link">Projects</a>
               </li>
               <li class="nav__link">
                 <a href="#article" class="link">Article</a>
@@ -44,7 +44,7 @@
             </ul>
           </nav>
         </div>
-        <ul class="site-header__media">
+        <ul class="home__media">
           <li class="social-media__button">
             <a href="#" class="btn btn--round btn--tertiary">
               <svg class="social-media__icon">
@@ -67,7 +67,7 @@
             </a>
           </li>
         </ul>
-        <div class="site-header__cta">
+        <div class="home__cta">
           <div class="cta cta--black">
             <div class="cta__title">
               <h1 class="header__primary">How do you design content for every language</h1>
@@ -78,10 +78,12 @@
                 customers eat in over 200 cities around the world. Come find the answers with us.
               </p>
             </div>
-            <a href="#contact" class="btn btn--rounded btn--secondary"> Work with us </a>
+            <div class="cta__btn">
+              <a href="#contact" class="btn btn--rounded btn--secondary"> Work with us </a>
+            </div>
           </div>
         </div>
-        <div class="site-header__video">
+        <div class="home__video">
           <div class="video">
             <svg class="video__play">
               <use xlink:href="./assets/svg/sprite.svg#icon-play"></use>
@@ -89,10 +91,11 @@
           </div>
         </div>
       </header>
-      <section id="about" class="intro l-intro">
-        <div class="intro__main-background"></div>
-        <div class="intro__side-background"></div>
-        <div class="intro__cta">
+
+      <section id="about" class="about l-about">
+        <div class="about__main-background"></div>
+        <div class="about__side-background"></div>
+        <div class="about__cta">
           <div class="cta">
             <div class="cta__title">
               <h2 class="header__secondary">Delighting customers in over 200 cities in the world.</h2>
@@ -103,12 +106,15 @@
                 customers eat in over 200 cities around the world. Come find the answers with us.
               </p>
             </div>
-            <a href="#contact" class="btn btn--rounded btn--secondary">find out more</a>
+            <div class="cta__btn">
+              <a href="#contact" class="btn btn--rounded btn--secondary">find out more</a>
+            </div>
           </div>
         </div>
-        <div class="intro__image-wrapper">
-          <img src="assets/img/shapes.jpg" alt="white shapes" class="intro__image" loading="lazy" />
-          <div class="intro__caption">
+        <div class="about__image-wrapper">
+          <div class="about__plus"></div>
+          <img src="assets/img/shapes.jpg" alt="white shapes" class="about__image" loading="lazy" />
+          <div class="about__caption">
             <p class="text__secondary">
               Delighting customers in over<br />
               200 cities in the world.
@@ -116,6 +122,7 @@
           </div>
         </div>
       </section>
+
       <section class="expertise l-expertise">
         <div class="expertise__header">
           <div class="expertise__main">
@@ -188,6 +195,29 @@
           </div>
         </div>
       </section>
+
+      <section id="services" class="services services--second l-services--second">
+        <div class="services__cta">
+          <div class="cta">
+            <div class="cta__title">
+              <h2 class="header__secondary">Create a free website in minutes</h2>
+            </div>
+            <div class="cta__text cta__text--narrow">
+              <p class="text__secondary">
+                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
+                customers eat in over 200 cities around the world. Come find the answers with us.
+              </p>
+            </div>
+            <div class="cta__btn">
+              <a href="#contact" class="btn btn--rounded btn--transparent">find out more</a>
+            </div>
+          </div>
+        </div>
+        <div class="services__phone">
+          <img class="services__phone-image" src="assets/img/iPhone.png" alt="phone" loading="lazy" />
+        </div>
+      </section>
+
       <section class="services l-services">
         <div class="services__side-background"></div>
         <div class="services__main-background"></div>
@@ -219,7 +249,7 @@
             </div>
           </div>
         </div>
-        <div class="services__cta">
+        <div class="services__cta services__cta--right">
           <div class="cta">
             <div class="cta__title">
               <h2 class="header__secondary">Search Engine Optimization And Advertising</h2>
@@ -230,228 +260,112 @@
                 customers eat in over 200 cities around the world. Come find the answers with us.
               </p>
             </div>
-            <a href="#contact" class="btn btn--rounded btn--transparent">find out more</a>
-          </div>
-        </div>
-      </section>
-      <section id="projects" class="portfolio l-portfolio">
-        <div class="portfolio__item">
-          <div class="portfolio__image-wrapper">
-            <img class="portfolio__image" src="assets/img/coffee.jpg" alt="1 project" loading="lazy" />
-          </div>
-          <div class="portfolio__content-wrapper">
-            <div class="portfolio__content">
-              <div class="portfolio__title">
-                <h4 class="header__quaternary">Mass Impressions</h4>
-              </div>
-              <p class="text__tertiary">
-                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
-                customers eat in over 200 cities around the world.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio__item">
-          <div class="portfolio__image-wrapper">
-            <img class="portfolio__image" src="assets/img/work.jpg" alt="2 project" loading="lazy" />
-          </div>
-          <div class="portfolio__content-wrapper">
-            <div class="portfolio__content">
-              <div class="portfolio__title">
-                <h4 class="header__quaternary">Mass Impressions</h4>
-              </div>
-              <p class="text__tertiary">
-                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
-                customers eat in over 200 cities around the world.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio__item">
-          <div class="portfolio__image-wrapper">
-            <img class="portfolio__image" src="assets/img/business.jpg" alt="3 project" loading="lazy" />
-          </div>
-          <div class="portfolio__content-wrapper">
-            <div class="portfolio__content">
-              <div class="portfolio__title">
-                <h4 class="header__quaternary">Mass Impressions</h4>
-              </div>
-              <p class="text__tertiary">
-                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
-                customers eat in over 200 cities around the world.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio__item">
-          <div class="portfolio__image-wrapper">
-            <img class="portfolio__image" src="assets/img/books.jpg" alt="4 project" loading="lazy" />
-          </div>
-          <div class="portfolio__content-wrapper">
-            <div class="portfolio__content">
-              <div class="portfolio__title">
-                <h4 class="header__quaternary">Mass Impressions</h4>
-              </div>
-              <p class="text__tertiary">
-                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
-                customers eat in over 200 cities around the world.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio__item">
-          <div class="portfolio__image-wrapper">
-            <img class="portfolio__image" src="assets/img/home.jpg" alt="5 project" loading="lazy" />
-          </div>
-          <div class="portfolio__content-wrapper">
-            <div class="portfolio__content">
-              <div class="portfolio__title">
-                <h4 class="header__quaternary">Mass Impressions</h4>
-              </div>
-              <p class="text__tertiary">
-                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
-                customers eat in over 200 cities around the world.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio__item">
-          <div class="portfolio__image-wrapper">
-            <img class="portfolio__image" src="assets/img/desk.jpg" alt="6 project" loading="lazy" />
-          </div>
-          <div class="portfolio__content-wrapper">
-            <div class="portfolio__content">
-              <div class="portfolio__title">
-                <h4 class="header__quaternary">Mass Impressions</h4>
-              </div>
-              <p class="text__tertiary">
-                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
-                customers eat in over 200 cities around the world.
-              </p>
+            <div class="cta__btn">
+              <a href="#contact" class="btn btn--rounded btn--transparent">find out more</a>
             </div>
           </div>
         </div>
       </section>
-      <section id="testimonial" class="testimonials l-testimonials">
-        <div class="testimonials__content">
-          <h2 class="header__secondary">What Customer Says</h2>
-          <div class="testimonials__opinion">
-            <p class="text__primary">
-              “ We're the content, research and design team at Oxford. We help riders move, restaurants grow and
-              customers eat in over 200 cities around the world. Come find the answers with us.”
-            </p>
+
+      <section id="projects" class="projects l-projects">
+        <div class="projects__item">
+          <div class="projects__image-wrapper">
+            <img class="projects__image" src="assets/img/coffee.jpg" alt="1 project" loading="lazy" />
           </div>
-          <div class="testimonials__user">
-            <div class="testimonials__image-wrapper">
-              <img
-                src="assets/img/testimonials-user.jpg"
-                alt="Shane George"
-                class="testimonials__image"
-                loading="lazy"
-              />
-            </div>
-            <div class="testimonials__name">
-              <p class="text__secondary">Shane George</p>
-            </div>
-            <div class="testimonials__title">
-              <p class="text__tertiary">Product Designer</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="pricing l-pricing">
-        <div class="pricing__header">
-          <div class="pricing__main">
-            <h2 class="header__secondary">Pricing Table</h2>
-          </div>
-          <p class="text__secondary">
-            We're the content, research and design team at Oxford. We help riders move, restaurants grow and customers
-            eat in over 200 cities around the world.
-          </p>
-        </div>
-        <div class="pricing__content">
-          <div class="pricing__column">
-            <div class="pricing__title">
-              <h3 class="header__tertiary">Starter</h3>
-            </div>
-            <div class="pricing__cost">Free</div>
-            <div class="pricing__description">
-              <div class="text__tertiary">
-                Our basic version of MI Business for teams that are just getting started.
+          <div class="projects__content-wrapper">
+            <div class="projects__content">
+              <div class="projects__title">
+                <h4 class="header__quaternary">Mass Impressions</h4>
               </div>
-            </div>
-            <div class="pricing__features">
-              <div class="pricing__benefit">
-                <p class="text__tertiary">Unlimited tasks, projects, & conversations</p>
-              </div>
-              <div class="pricing__benefit"><p class="text__tertiary">Up to 15 team members</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Free Upload</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Basic dashboards</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Basic search</p></div>
-            </div>
-            <div class="pricing__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
-            </div>
-          </div>
-          <div class="pricing__column">
-            <div class="pricing__title">
-              <h3 class="header__tertiary">Premium</h3>
-            </div>
-            <div class="pricing__cost pricing__cost--primary">$190</div>
-            <p class="pricing__description">Powerful enough to run your entire business. Small team may apply.</p>
-            <div class="pricing__features">
-              <div class="pricing__benefit">
-                <p class="text__tertiary">Unlimited tasks, projects, & conversations</p>
-              </div>
-              <div class="pricing__benefit"><p class="text__tertiary">Up to 15 team members</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Free Upload</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Basic dashboards</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Basic search</p></div>
-            </div>
-            <div class="pricing__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
-            </div>
-          </div>
-          <div class="pricing__column">
-            <div class="pricing__title">
-              <h3 class="header__tertiary">Enterprise</h3>
-            </div>
-            <div class="pricing__cost">$360</div>
-            <p class="pricing__description">All the power of Premium, plus more control and support.</p>
-            <div class="pricing__features">
-              <div class="pricing__benefit">
-                <p class="text__tertiary">Unlimited tasks, projects, & conversations</p>
-              </div>
-              <div class="pricing__benefit"><p class="text__tertiary">Up to 15 team members</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Free Upload</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Basic dashboards</p></div>
-              <div class="pricing__benefit"><p class="text__tertiary">Basic search</p></div>
-            </div>
-            <div class="pricing__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="services" class="services services--second l-services--second">
-        <div class="services__cta">
-          <div class="cta">
-            <div class="cta__title">
-              <h2 class="header__secondary">Create a free website in minutes</h2>
-            </div>
-            <div class="cta__text cta__text--narrow">
-              <p class="text__secondary">
+              <p class="text__tertiary">
                 We're the content, research and design team at Oxford. We help riders move, restaurants grow and
-                customers eat in over 200 cities around the world. Come find the answers with us.
+                customers eat in over 200 cities around the world.
               </p>
             </div>
-            <a href="#contact" class="btn btn--rounded btn--transparent">find out more</a>
           </div>
         </div>
-        <div class="services__phone">
-          <img class="services__phone-image" src="assets/img/iPhone.png" alt="phone" loading="lazy" />
+        <div class="projects__item">
+          <div class="projects__image-wrapper">
+            <img class="projects__image" src="assets/img/work.jpg" alt="2 project" loading="lazy" />
+          </div>
+          <div class="projects__content-wrapper">
+            <div class="projects__content">
+              <div class="projects__title">
+                <h4 class="header__quaternary">Mass Impressions</h4>
+              </div>
+              <p class="text__tertiary">
+                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
+                customers eat in over 200 cities around the world.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects__item">
+          <div class="projects__image-wrapper">
+            <img class="projects__image" src="assets/img/business.jpg" alt="3 project" loading="lazy" />
+          </div>
+          <div class="projects__content-wrapper">
+            <div class="projects__content">
+              <div class="projects__title">
+                <h4 class="header__quaternary">Mass Impressions</h4>
+              </div>
+              <p class="text__tertiary">
+                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
+                customers eat in over 200 cities around the world.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects__item">
+          <div class="projects__image-wrapper">
+            <img class="projects__image" src="assets/img/books.jpg" alt="4 project" loading="lazy" />
+          </div>
+          <div class="projects__content-wrapper">
+            <div class="projects__content">
+              <div class="projects__title">
+                <h4 class="header__quaternary">Mass Impressions</h4>
+              </div>
+              <p class="text__tertiary">
+                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
+                customers eat in over 200 cities around the world.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects__item">
+          <div class="projects__image-wrapper">
+            <img class="projects__image" src="assets/img/home.jpg" alt="5 project" loading="lazy" />
+          </div>
+          <div class="projects__content-wrapper">
+            <div class="projects__content">
+              <div class="projects__title">
+                <h4 class="header__quaternary">Mass Impressions</h4>
+              </div>
+              <p class="text__tertiary">
+                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
+                customers eat in over 200 cities around the world.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects__item">
+          <div class="projects__image-wrapper">
+            <img class="projects__image" src="assets/img/desk.jpg" alt="6 project" loading="lazy" />
+          </div>
+          <div class="projects__content-wrapper">
+            <div class="projects__content">
+              <div class="projects__title">
+                <h4 class="header__quaternary">Mass Impressions</h4>
+              </div>
+              <p class="text__tertiary">
+                We're the content, research and design team at Oxford. We help riders move, restaurants grow and
+                customers eat in over 200 cities around the world.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+
       <section id="article" class="news l-news">
         <div class="news__header">
           <div class="news__main">
@@ -575,6 +489,107 @@
           </li>
         </ul>
       </section>
+
+      <section id="testimonial" class="testimonials l-testimonials">
+        <div class="testimonials__content">
+          <h2 class="header__secondary">What Customer Says</h2>
+          <div class="testimonials__opinion">
+            <p class="text__primary">
+              “ We're the content, research and design team at Oxford. We help riders move, restaurants grow and
+              customers eat in over 200 cities around the world. Come find the answers with us.”
+            </p>
+          </div>
+          <div class="testimonials__user">
+            <div class="testimonials__image-wrapper">
+              <img
+                src="assets/img/testimonials-user.jpg"
+                alt="Shane George"
+                class="testimonials__image"
+                loading="lazy"
+              />
+            </div>
+            <div class="testimonials__name">
+              <p class="text__secondary">Shane George</p>
+            </div>
+            <div class="testimonials__title">
+              <p class="text__tertiary">Product Designer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing l-pricing">
+        <div class="pricing__header">
+          <div class="pricing__main">
+            <h2 class="header__secondary">Pricing Table</h2>
+          </div>
+          <p class="text__secondary">
+            We're the content, research and design team at Oxford. We help riders move, restaurants grow and customers
+            eat in over 200 cities around the world.
+          </p>
+        </div>
+        <div class="pricing__content">
+          <div class="pricing__column">
+            <div class="pricing__title">
+              <h3 class="header__tertiary">Starter</h3>
+            </div>
+            <div class="pricing__cost">Free</div>
+            <div class="pricing__description">
+              <div class="text__tertiary">
+                Our basic version of MI Business for teams that are just getting started.
+              </div>
+            </div>
+            <div class="pricing__features">
+              <div class="pricing__benefit">
+                <p class="text__tertiary">Unlimited tasks, projects, & conversations</p>
+              </div>
+              <div class="pricing__benefit"><p class="text__tertiary">Up to 15 team members</p></div>
+              <div class="pricing__benefit"><p class="text__tertiary">Basic dashboards</p></div>
+              <div class="pricing__benefit"><p class="text__tertiary">Basic search</p></div>
+            </div>
+            <div class="pricing__btn">
+              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
+            </div>
+          </div>
+          <div class="pricing__column">
+            <div class="pricing__title">
+              <h3 class="header__tertiary">Premium</h3>
+            </div>
+            <div class="pricing__cost pricing__cost--primary">$190</div>
+            <p class="pricing__description">Powerful enough to run your entire business. Small team may apply.</p>
+            <div class="pricing__features">
+              <div class="pricing__benefit">
+                <p class="text__tertiary">Unlimited tasks, projects, & conversations</p>
+              </div>
+              <div class="pricing__benefit"><p class="text__tertiary">Up to 15 team members</p></div>
+              <div class="pricing__benefit"><p class="text__tertiary">Free Upload</p></div>
+              <div class="pricing__benefit"><p class="text__tertiary">Basic search</p></div>
+            </div>
+            <div class="pricing__btn">
+              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
+            </div>
+          </div>
+          <div class="pricing__column">
+            <div class="pricing__title">
+              <h3 class="header__tertiary">Enterprise</h3>
+            </div>
+            <div class="pricing__cost">$360</div>
+            <p class="pricing__description">All the power of Premium, plus more control and support.</p>
+            <div class="pricing__features">
+              <div class="pricing__benefit">
+                <p class="text__tertiary">Unlimited tasks, projects, & conversations</p>
+              </div>
+              <div class="pricing__benefit"><p class="text__tertiary">Up to 15 team members</p></div>
+              <div class="pricing__benefit"><p class="text__tertiary">Free Upload</p></div>
+              <div class="pricing__benefit"><p class="text__tertiary">Basic dashboards</p></div>
+            </div>
+            <div class="pricing__btn">
+              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="contact l-contact">
         <div class="contact__main">
           <form action="#" class="contact__form">
@@ -587,7 +602,9 @@
             </div>
             <input name="name" type="text" class="contact__input" placeholder="Your Name" />
             <input name="email" type="email" class="contact__input" placeholder="Your Email" />
-            <a href="index.html" class="btn btn--rounded btn--secondary btn--full-width">Work With Us</a>
+            <div class="contact__btn">
+              <a href="index.html" class="btn btn--rounded btn--secondary btn--full-width">Work With Us</a>
+            </div>
           </form>
         </div>
         <div class="contact__side">
@@ -600,6 +617,7 @@
           </div>
         </div>
       </section>
+
       <section class="testimonials testimonials--secondary l-testimonials">
         <div class="testimonials__content">
           <div class="testimonials__cta">
@@ -613,11 +631,14 @@
                   customers eat in over 200 cities around the world. Come find the answers with us.
                 </p>
               </div>
-              <a href="#contact" class="btn btn--rounded btn--primary">Work with us</a>
+              <div class="cta__btn cta__btn--center">
+                <a href="#contact" class="btn btn--rounded btn--primary">Work with us</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       <footer class="footer">
         <div class="footer__links l-footer__links">
           <nav class="nav">
@@ -629,10 +650,10 @@
                 <a href="#about" class="link">About</a>
               </div>
               <div class="nav__link">
-                <a href="#projects" class="link">Projects</a>
+                <a href="#services" class="link">Services</a>
               </div>
               <div class="nav__link">
-                <a href="#services" class="link">Services</a>
+                <a href="#projects" class="link">Projects</a>
               </div>
               <div class="nav__link">
                 <a href="#article" class="link">Article</a>

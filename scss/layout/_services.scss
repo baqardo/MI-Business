@@ -1,7 +1,7 @@
 .services {
-  &--second {
-    padding: 50px 0;
+  min-height: 100%;
 
+  &--second {
     background-color: f_color(main, secondary);
     background-image: url(../assets/img/man-reading.jpg);
     background-size: cover;
@@ -24,14 +24,24 @@
     background-repeat: no-repeat;
   }
 
+  &__cta {
+    &--right {
+      margin-left: 30px;
+    }
+  }
+
   &__boxes {
     display: flex;
     justify-self: center;
-    align-self: center;
     flex-wrap: wrap;
 
     width: 640px;
     height: 640px;
+
+    @include respond($big-bp) {
+      width: 400px;
+      height: 400px;
+    }
   }
 
   &__item {
@@ -72,18 +82,14 @@
     fill: transparent;
   }
 
-  &__cta {
-    margin: 300px 0;
-  }
-
   &__play {
     @include flex-center;
 
     border-radius: 50%;
     background-color: f_color(main, tertiary);
 
-    width: 160px;
-    height: 160px;
+    width: 60%;
+    height: 60%;
 
     &:hover {
       cursor: pointer;
@@ -94,5 +100,47 @@
     &-image {
       width: 100%;
     }
+  }
+}
+
+.l-services {
+  @include grid18;
+
+  .services__side-background {
+    grid-column: 1 / 7;
+    grid-row: 1;
+  }
+
+  .services__main-background {
+    grid-column: 7 / -1;
+    grid-row: 1;
+  }
+  .services__boxes {
+    grid-column: 4 / 10;
+    grid-row: 1;
+    align-self: center;
+  }
+  .services__cta {
+    grid-column: 12 / 17;
+    grid-row: 1;
+    align-self: center;
+
+    @include respond($big-bp) {
+      grid-column: 11 / 17;
+    }
+  }
+}
+
+.l-services--second {
+  @include grid16;
+
+  .services__cta {
+    grid-column: 4 / 9;
+    grid-row: 1;
+  }
+
+  .services__phone {
+    grid-column: 10 / 15;
+    grid-row: 1;
   }
 }

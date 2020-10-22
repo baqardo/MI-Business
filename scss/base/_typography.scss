@@ -44,7 +44,17 @@
 }
 
 .link {
+  transition: all 0.4s;
+
+  padding: 10px;
+
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 3px;
+
+  &:hover,
+  &:focus {
+    color: f_color(font, primary-dark);
+    cursor: pointer;
+  }
 }

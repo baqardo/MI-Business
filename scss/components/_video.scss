@@ -1,7 +1,7 @@
 .video {
   position: relative;
 
-  padding: 50% 0;
+  padding-top: 100%;
 
   &__play {
     @include absolute-center;

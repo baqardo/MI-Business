@@ -1,12 +1,6 @@
-@mixin respond($breakpoint, $landscape: false) {
-  @if not $landscape {
-    @media only screen and (max-width: $breakpoint) {
-      @content;
-    }
-  } @else {
-    @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
-      @content;
-    }
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
   }
 }
 

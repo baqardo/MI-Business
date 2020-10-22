@@ -1,0 +1,51 @@
+.footer {
+  &__logo {
+    color: f_color(font, tertiary);
+  }
+
+  &__copyright {
+    color: f_color(font, tertiary-dark);
+  }
+
+  &__nav {
+    text-transform: uppercase;
+  }
+
+  &__links {
+    padding: 30px 0;
+    background-color: f_color(main, tertiary);
+  }
+
+  &__info {
+    padding: 20px 0;
+    background-color: f_color(main, secondary);
+  }
+}
+
+.l-footer__links {
+  @include grid16;
+  align-items: center;
+
+  .nav {
+    grid-column: 2 / 10;
+  }
+
+  .footer__media {
+    grid-column: 12 / 16;
+    justify-self: right;
+  }
+}
+
+.l-footer__info {
+  @include grid16;
+  align-items: center;
+
+  .footer__logo {
+    grid-column: 2 / 6;
+  }
+
+  .footer__copyright {
+    grid-column: 7 / 16;
+    justify-self: end;
+  }
+}

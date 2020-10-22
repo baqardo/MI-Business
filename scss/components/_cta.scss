@@ -1,4 +1,7 @@
 .cta {
+  display: flex;
+  flex-direction: column;
+
   color: f_color(font, tertiary);
 
   &--black {
@@ -14,6 +17,14 @@
 
     &--narrow {
       width: 80%;
+    }
+  }
+
+  &__btn {
+    align-self: start;
+
+    &--center {
+      align-self: center;
     }
   }
 }

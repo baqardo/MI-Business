@@ -1,0 +1,31 @@
+.nav {
+  text-transform: uppercase;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    margin-right: max(30px, 3vw);
+  }
+
+  &__btn {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+}
+
+.l-nav {
+  @include grid16;
+  align-items: center;
+
+  .nav__logo {
+    grid-column: 1 / 4;
+    justify-self: center;
+  }
+
+  .nav__list {
+    grid-column: 4 / 17;
+  }
+}

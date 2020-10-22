@@ -1,10 +1,9 @@
 .news {
-  padding: 100px 0;
-  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 6%;
+  min-height: 100%;
 
-  &__header {
-    margin-bottom: 80px;
-  }
+  text-align: center;
 
   &__main {
     margin-bottom: 30px;
@@ -12,6 +11,8 @@
 
   &__content {
     @include flex-center;
+
+    margin-top: 40px;
 
     overflow: hidden;
   }
@@ -23,7 +24,7 @@
     background-color: f_color(main, tertiary);
 
     min-width: 405px;
-    height: 600px;
+    height: 550px;
 
     text-align: center;
 
@@ -76,13 +77,13 @@
   }
 
   &__description {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   &__brief {
     display: none;
 
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   &__btn {
@@ -101,5 +102,19 @@
 
     margin-top: 40px;
     margin-bottom: 20px;
+  }
+}
+
+.l-news {
+  @include grid16;
+
+  .news__header {
+    grid-column: 6 / 12;
+    grid-row: 1;
+  }
+
+  .news__content {
+    grid-column: 1 / 17;
+    grid-row: 2;
   }
 }

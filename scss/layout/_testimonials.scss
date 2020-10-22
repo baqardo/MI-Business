@@ -1,4 +1,6 @@
 .testimonials {
+  min-height: 100%;
+
   background-color: f_color(main, secondary);
   background-image: url(../assets/img/sky.jpg);
   background-size: cover;
@@ -16,8 +18,6 @@
   &__content {
     @include flex-center;
     flex-direction: column;
-
-    margin: 300px 0;
 
     color: f_color(font, tertiary);
     text-align: center;
@@ -57,5 +57,14 @@
 
   &__cta {
     color: f_color(font, tertiary);
+  }
+}
+
+.l-testimonials {
+  @include grid16;
+
+  .testimonials__content {
+    grid-column: 5 / 13;
+    align-self: center;
   }
 }

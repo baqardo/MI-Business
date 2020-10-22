@@ -1,9 +1,9 @@
 .contact {
   background-color: f_color(main, tertiary);
+  min-height: 100%;
 
   &__main {
     @include flex-center;
-    margin: 150px 0;
   }
 
   &__video {
@@ -42,5 +42,17 @@
     &:hover {
       border: 1.5px solid f_color(main, secondary, 0.6);
     }
+  }
+}
+
+.l-contact {
+  @include grid16;
+
+  .contact__main {
+    grid-column: 1 / 10;
+  }
+
+  .contact__side {
+    grid-column: 11 / 17;
   }
 }

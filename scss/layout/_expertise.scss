@@ -1,19 +1,18 @@
 .expertise {
-  margin: 100px 0;
+  padding: 5% 0;
+
+  min-height: 100%;
 
   text-align: center;
-
-  &__header {
-    margin-bottom: 50px;
-  }
 
   &__main {
     margin-bottom: 30px;
   }
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+
+    display: flex;
 
     box-shadow: 0 60px 65px f_color(main, secondary, 0.1);
     background-color: f_color(main, tertiary);
@@ -24,7 +23,9 @@
   }
 
   &__column {
-    padding: 70px 50px;
+    @include flex-center;
+    flex-direction: column;
+    padding: 50px 0;
 
     &:nth-of-type(2) {
       border-left: 1px solid f_color(main, secondary, 0.1);
@@ -33,11 +34,27 @@
   }
 
   &__title {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 
   &__text {
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+
+    width: 80%;
+  }
+}
+
+.l-expertise {
+  @include grid16;
+  align-items: center;
+
+  .expertise__header {
+    grid-column: 6 / 12;
+  }
+
+  .expertise__content {
+    grid-column: 3 / 15;
+    align-self: start;
   }
 }
