@@ -1,10 +1,18 @@
 .footer {
   &__logo {
     color: f_color(font, tertiary);
+
+    @include respond($small-bp) {
+      color: f_color(font, secondary-black);
+    }
   }
 
   &__copyright {
     color: f_color(font, tertiary-dark);
+
+    @include respond($small-bp) {
+      color: f_color(font, secondary-black);
+    }
   }
 
   &__nav {
@@ -19,12 +27,20 @@
   &__info {
     padding: 20px 0;
     background-color: f_color(main, secondary);
+
+    @include respond($small-bp) {
+      background-color: f_color(main, tertiary);
+    }
   }
 }
 
 .l-footer__links {
   @include grid16;
   align-items: center;
+
+  @include respond($small-bp) {
+    display: none;
+  }
 
   .nav {
     grid-column: 2 / 10;
@@ -33,6 +49,14 @@
   .footer__media {
     grid-column: 12 / 16;
     justify-self: right;
+
+    @include respond($big-bp) {
+      grid-column: 12 / 17;
+    }
+
+    @include respond($medium-bp) {
+      display: none;
+    }
   }
 }
 
@@ -41,11 +65,23 @@
   align-items: center;
 
   .footer__logo {
-    grid-column: 2 / 6;
+    grid-column: 2 / 5;
+
+    @include respond($tiny-bp) {
+      grid-column: 2 / 8;
+    }
   }
 
   .footer__copyright {
     grid-column: 7 / 16;
     justify-self: end;
+
+    @include respond($medium-bp) {
+      grid-column: 5 / 16;
+    }
+
+    @include respond($tiny-bp) {
+      grid-column: 8 / 16;
+    }
   }
 }

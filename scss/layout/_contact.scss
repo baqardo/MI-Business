@@ -14,7 +14,13 @@
   }
 
   &__form {
+    padding: 5% 0;
+
     width: 60%;
+
+    @include respond($small-bp) {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -43,6 +49,10 @@
       border: 1.5px solid f_color(main, secondary, 0.6);
     }
   }
+
+  &__btn {
+    margin-top: 30px;
+  }
 }
 
 .l-contact {
@@ -50,9 +60,17 @@
 
   .contact__main {
     grid-column: 1 / 10;
+
+    @include respond($medium-bp) {
+      grid-column: 2 / 16;
+    }
   }
 
   .contact__side {
     grid-column: 11 / 17;
+
+    @include respond($medium-bp) {
+      display: none;
+    }
   }
 }

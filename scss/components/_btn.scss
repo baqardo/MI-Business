@@ -11,12 +11,24 @@
   text-transform: uppercase;
   text-align: center;
 
+  @include respond($medium-bp) {
+    padding: 15px 60px;
+  }
+
+  @include respond($tiny-bp) {
+    padding: 15px 50px;
+  }
+
   &:hover {
     cursor: pointer;
   }
 
   &--link {
     padding: 10px;
+
+    @include respond($small-bp) {
+      padding: 6px;
+    }
   }
 
   &--round {
@@ -26,7 +38,6 @@
   }
 
   &--rounded {
-    padding: 20px 80px;
     border-radius: 32px;
   }
 

@@ -6,11 +6,21 @@
   &__primary {
     font-size: 72px;
     letter-spacing: -2px;
+
+    @include respond($small-bp) {
+      font-size: clamp(40px, 9vw, 72px);
+      letter-spacing: -1px;
+    }
   }
 
   &__secondary {
     font-size: 48px;
     letter-spacing: -1.3px;
+
+    @include respond($small-bp) {
+      font-size: clamp(32px, 7vw, 48px);
+      letter-spacing: 0;
+    }
   }
 
   &__tertiary {
@@ -20,6 +30,11 @@
   &__quaternary {
     font-size: 24px;
     letter-spacing: -0.6px;
+
+    @include respond($medium-bp) {
+      font-size: clamp(16px, 2.4vw, 24px);
+      letter-spacing: 0;
+    }
   }
 }
 
@@ -28,6 +43,12 @@
     font-size: 32px;
     line-height: 57px;
     letter-spacing: -1.4px;
+
+    @include respond($small-bp) {
+      font-size: clamp(24px, 5vw, 32px);
+      line-height: 32px;
+      letter-spacing: -0.5px;
+    }
   }
 
   &__secondary {
@@ -40,6 +61,12 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.5px;
+
+    @include respond($medium-bp) {
+      font-size: clamp(12px, 1.7vw, 16px);
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
   }
 }
 
@@ -56,5 +83,9 @@
   &:focus {
     color: f_color(font, primary-dark);
     cursor: pointer;
+  }
+
+  .nav__link & {
+    padding-left: 0;
   }
 }

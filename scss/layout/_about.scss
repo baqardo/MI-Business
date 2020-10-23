@@ -15,6 +15,10 @@
     background-repeat: no-repeat;
   }
 
+  &__cta {
+    padding: 5% 0;
+  }
+
   &__caption {
     position: absolute;
     bottom: 0;
@@ -83,6 +87,10 @@
 
     @include respond($big-bp) {
       grid-column: 5 / 15;
+    }
+
+    @include respond($small-bp) {
+      grid-column: 2 / 16;
     }
   }
 

@@ -19,6 +19,8 @@
     @include flex-center;
     flex-direction: column;
 
+    padding: 5% 0;
+
     color: f_color(font, tertiary);
     text-align: center;
   }
@@ -66,5 +68,13 @@
   .testimonials__content {
     grid-column: 5 / 13;
     align-self: center;
+
+    @include respond($big-bp) {
+      grid-column: 4 / 14;
+    }
+
+    @include respond($small-bp) {
+      grid-column: 2 / 16;
+    }
   }
 }

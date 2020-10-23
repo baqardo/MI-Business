@@ -28,6 +28,10 @@
 
     text-align: center;
 
+    @include respond($medium-bp) {
+      height: 460px;
+    }
+
     &:hover {
       color: f_color(main, tertiary);
     }
@@ -55,7 +59,7 @@
   }
 
   &__card:hover &__text {
-    transform: translateY(-130%);
+    transform: translateY(-135%);
     padding: 0 10px;
   }
 
@@ -111,6 +115,18 @@
   .news__header {
     grid-column: 6 / 12;
     grid-row: 1;
+
+    @include respond($big-bp) {
+      grid-column: 5 / 13;
+    }
+
+    @include respond($medium-bp) {
+      grid-column: 4 / 14;
+    }
+
+    @include respond($small-bp) {
+      grid-column: 2 / 16;
+    }
   }
 
   .news__content {

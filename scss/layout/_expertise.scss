@@ -5,6 +5,10 @@
 
   text-align: center;
 
+  @include respond($medium-bp) {
+    padding-bottom: 0;
+  }
+
   &__main {
     margin-bottom: 30px;
   }
@@ -16,16 +20,29 @@
 
     box-shadow: 0 60px 65px f_color(main, secondary, 0.1);
     background-color: f_color(main, tertiary);
+
+    @include respond($small-bp) {
+      flex-direction: column;
+    }
   }
 
   &__icon {
     width: 100%;
+
+    @include respond($small-bp) {
+      width: 50%;
+    }
   }
 
   &__column {
     @include flex-center;
     flex-direction: column;
     padding: 50px 0;
+
+    @include respond($small-bp) {
+      border: 1px solid f_color(main, secondary, 0.1);
+      padding: 20px 0;
+    }
 
     &:nth-of-type(2) {
       border-left: 1px solid f_color(main, secondary, 0.1);
@@ -35,6 +52,10 @@
 
   &__title {
     margin-top: 50px;
+
+    @include respond($small-bp) {
+      margin-top: 20px;
+    }
   }
 
   &__text {
@@ -42,6 +63,10 @@
     margin-bottom: 60px;
 
     width: 80%;
+
+    @include respond($small-bp) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -51,10 +76,30 @@
 
   .expertise__header {
     grid-column: 6 / 12;
+
+    @include respond($big-bp) {
+      grid-column: 5 / 13;
+    }
+
+    @include respond($medium-bp) {
+      grid-column: 4 / 14;
+    }
+
+    @include respond($small-bp) {
+      grid-column: 2 / 16;
+    }
   }
 
   .expertise__content {
     grid-column: 3 / 15;
     align-self: start;
+
+    @include respond($big-bp) {
+      grid-column: 2 / 16;
+    }
+
+    @include respond($medium-bp) {
+      grid-column: 1 / 17;
+    }
   }
 }

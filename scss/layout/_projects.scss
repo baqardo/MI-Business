@@ -23,6 +23,11 @@
     text-align: center;
     color: f_color(font, tertiary);
 
+    @include respond($medium-bp) {
+      width: 90%;
+      height: 90%;
+    }
+
     &-wrapper {
       @include flex-center;
 
@@ -55,5 +60,13 @@
 
   .projects__item {
     grid-column: span 6;
+
+    @include respond($small-bp) {
+      grid-column: span 9;
+    }
+
+    @include respond($tiny-bp) {
+      grid-column: span 18;
+    }
   }
 }

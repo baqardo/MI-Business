@@ -16,6 +16,7 @@
       <header id="home" class="home l-home">
         <div class="home__nav">
           <nav class="nav l-nav">
+            <div class="nav__border"></div>
             <div class="nav__logo">
               <div class="logo">Mi Business</div>
             </div>
@@ -38,10 +39,18 @@
               <li class="nav__link">
                 <a href="#testimonial" class="link">Testimonial</a>
               </li>
-              <li class="nav__btn">
-                <a href="#contact" class="btn btn--primary btn--link link">Contact</a>
-              </li>
             </ul>
+            <div class="nav__btn">
+              <a href="#contact" class="btn btn--primary btn--link link">Contact</a>
+            </div>
+            <div class="nav__burger">
+              <input type="checkbox" id="burger-toggler" class="burger-toggler" />
+              <label for="burger-toggler" class="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </label>
+            </div>
           </nav>
         </div>
         <ul class="home__media">
@@ -642,7 +651,7 @@
       <footer class="footer">
         <div class="footer__links l-footer__links">
           <nav class="nav">
-            <div class="nav__list">
+            <div class="nav__list nav__list--narrow">
               <div class="nav__link">
                 <a href="#home" class="link">Home</a>
               </div>

@@ -1,9 +1,13 @@
 .pricing {
   padding-top: 4%;
-  padding-bottom: 6%;
+  padding-bottom: 8%;
 
   min-height: 100%;
   text-align: center;
+
+  @include respond($medium-bp) {
+    padding-bottom: 0;
+  }
 
   &__header {
     margin-bottom: 80px;
@@ -19,6 +23,14 @@
 
     box-shadow: 0 60px 65px f_color(main, secondary, 0.1);
     background-color: f_color(main, tertiary);
+
+    @include respond($medium-bp) {
+      box-shadow: none;
+    }
+
+    @include respond($small-bp) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__column {
@@ -29,6 +41,12 @@
     padding: 30px 0;
 
     background-color: f_color(main, tertiary);
+    border-bottom: 1px solid f_color(main, secondary-black, 0.2);
+
+    @include respond($small-bp) {
+      padding: 20px 0;
+      border-bottom: 1px solid f_color(main, secondary-black, 0.3);
+    }
 
     &:nth-of-type(2) {
       justify-content: center;
@@ -37,6 +55,14 @@
       box-shadow: 0 40px 56px f_color(main, secondary, 0.1);
 
       height: 110%;
+
+      @include respond($medium-bp) {
+        height: 100%;
+        transform: none;
+        box-shadow: none;
+        border-left: 1px solid f_color(main, secondary-black, 0.2);
+        border-right: 1px solid f_color(main, secondary-black, 0.2);
+      }
     }
   }
 
@@ -94,11 +120,31 @@
     grid-column: 6 / 12;
     grid-row: 1;
     align-self: center;
+
+    @include respond($big-bp) {
+      grid-column: 5 / 13;
+    }
+
+    @include respond($medium-bp) {
+      grid-column: 4 / 14;
+    }
+
+    @include respond($small-bp) {
+      grid-column: 2 / 16;
+    }
   }
 
   .pricing__content {
     grid-column: 3 / 15;
     grid-row: 2;
     align-self: start;
+
+    @include respond($big-bp) {
+      grid-column: 2 / 16;
+    }
+
+    @include respond($medium-bp) {
+      grid-column: 1 / 17;
+    }
   }
 }

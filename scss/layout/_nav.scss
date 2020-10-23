@@ -4,6 +4,20 @@
   &__list {
     display: flex;
     align-items: center;
+
+    &--narrow {
+      .nav__link {
+        margin-right: 15px;
+      }
+    }
+
+    @include respond($medium-bp) {
+      padding-top: 10px;
+    }
+
+    @include respond($small-bp) {
+      display: none;
+    }
   }
 
   &__link {
@@ -13,6 +27,30 @@
   &__btn {
     margin-left: auto;
     margin-right: 40px;
+
+    @include respond($small-bp) {
+      margin-right: 20px;
+    }
+  }
+
+  &__border {
+    display: none;
+    margin-top: 10px;
+    border-top: 1px solid f_color(main, secondary-black, 0.2);
+
+    @include respond($medium-bp) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    margin-right: 10px;
+
+    @include respond($small-bp) {
+      display: block;
+    }
   }
 }
 
@@ -23,9 +61,38 @@
   .nav__logo {
     grid-column: 1 / 4;
     justify-self: center;
+
+    @include respond($medium-bp) {
+      grid-column: 2 / 12;
+      justify-self: start;
+    }
   }
 
   .nav__list {
-    grid-column: 4 / 17;
+    grid-column: 4 / 15;
+
+    @include respond($medium-bp) {
+      grid-column: 2 / -1;
+      justify-self: start;
+
+      order: 2;
+    }
+  }
+
+  .nav__btn {
+    grid-column: 16 / 17;
+
+    @include respond($small-bp) {
+      grid-column: 15 / 16;
+    }
+  }
+
+  .nav__border {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .nav__burger {
+    grid-column: 16 / 17;
   }
 }

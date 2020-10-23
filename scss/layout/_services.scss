@@ -25,6 +25,8 @@
   }
 
   &__cta {
+    padding: 5% 0;
+
     &--right {
       margin-left: 30px;
     }
@@ -41,6 +43,11 @@
     @include respond($big-bp) {
       width: 400px;
       height: 400px;
+    }
+
+    @include respond($medium-bp) {
+      width: 300px;
+      height: 300px;
     }
   }
 
@@ -106,19 +113,43 @@
 .l-services {
   @include grid18;
 
+  @include respond($small-bp) {
+    display: none;
+  }
+
   .services__side-background {
     grid-column: 1 / 7;
     grid-row: 1;
+
+    @include respond($medium-bp) {
+      grid-column: 1 / 5;
+    }
+
+    @include respond($small-bp) {
+      display: none;
+    }
   }
 
   .services__main-background {
     grid-column: 7 / -1;
     grid-row: 1;
+
+    @include respond($medium-bp) {
+      grid-column: 5 / -1;
+    }
+
+    @include respond($small-bp) {
+      grid-column: 1 / -1;
+    }
   }
   .services__boxes {
     grid-column: 4 / 10;
     grid-row: 1;
     align-self: center;
+
+    @include respond($medium-bp) {
+      grid-column: 2 / 8;
+    }
   }
   .services__cta {
     grid-column: 12 / 17;
@@ -127,6 +158,14 @@
 
     @include respond($big-bp) {
       grid-column: 11 / 17;
+    }
+
+    @include respond($medium-bp) {
+      grid-column: 9 / 17;
+    }
+
+    @include respond($small-bp) {
+      grid-column: 2 / 16;
     }
   }
 }
@@ -137,10 +176,23 @@
   .services__cta {
     grid-column: 4 / 9;
     grid-row: 1;
+
+    @include respond($medium-bp) {
+      grid-column: 5 / 15;
+      justify-self: center;
+    }
+
+    @include respond($small-bp) {
+      grid-column: 2 / 16;
+    }
   }
 
   .services__phone {
     grid-column: 10 / 15;
     grid-row: 1;
+
+    @include respond($medium-bp) {
+      display: none;
+    }
   }
 }
