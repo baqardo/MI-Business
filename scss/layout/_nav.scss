@@ -1,6 +1,15 @@
 .nav {
   text-transform: uppercase;
 
+  @include respond($small-bp) {
+    position: fixed;
+    top: 0;
+
+    background-color: f_color(main, tertiary);
+
+    padding-top: 10px;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -50,6 +59,34 @@
 
     @include respond($small-bp) {
       display: block;
+    }
+  }
+
+  &__mobile {
+    transition: right 0.3s ease-in-out;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: auto;
+
+    background-color: f_color(main, tertiary);
+  }
+
+  &__mobile-list {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  &__mobile-link {
+    display: block;
+    padding: 20px 40px;
+
+    border-bottom: 1px solid f_color(main, secondary-black, 0.2);
+
+    &:hover {
+      color: f_color(main, primary);
+      cursor: pointer;
     }
   }
 }

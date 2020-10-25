@@ -9,7 +9,9 @@ $color-navy-blue: #1d1f2d;
 $color-grey: #979797;
 
 $z-index: (
-  nav: 1,
+  blur: 10,
+  nav-mobile: 20,
+  nav: 30,
 );
 
 $colors: (

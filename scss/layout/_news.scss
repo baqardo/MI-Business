@@ -1,9 +1,18 @@
 .news {
-  padding-top: 4%;
+  padding-top: 5%;
   padding-bottom: 6%;
   min-height: 100%;
 
   text-align: center;
+
+  @include respond($small-bp) {
+    padding-top: 10%;
+  }
+
+  @include respond($tiny-bp) {
+    padding-top: 15%;
+    padding-bottom: 0;
+  }
 
   &__main {
     margin-bottom: 30px;
@@ -30,6 +39,10 @@
 
     @include respond($medium-bp) {
       height: 460px;
+    }
+
+    @include respond($tiny-bp) {
+      min-width: 320px;
     }
 
     &:hover {

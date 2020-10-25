@@ -13,9 +13,11 @@
   </head>
   <body>
     <div class="l-page">
+      <div class="blur js-blur"></div>
+
       <header id="home" class="home l-home">
         <div class="home__nav">
-          <nav class="nav l-nav">
+          <nav class="nav l-nav js-nav">
             <div class="nav__border"></div>
             <div class="nav__logo">
               <div class="logo">Mi Business</div>
@@ -34,7 +36,7 @@
                 <a href="#projects" class="link">Projects</a>
               </li>
               <li class="nav__link">
-                <a href="#article" class="link">Article</a>
+                <a href="#news" class="link">News</a>
               </li>
               <li class="nav__link">
                 <a href="#testimonial" class="link">Testimonial</a>
@@ -44,14 +46,38 @@
               <a href="#contact" class="btn btn--primary btn--link link">Contact</a>
             </div>
             <div class="nav__burger">
-              <input type="checkbox" id="burger-toggler" class="burger-toggler" />
-              <label for="burger-toggler" class="burger">
+              <input type="checkbox" id="burger-toggler" class="js-burger-toggler burger-toggler" />
+              <label for="burger-toggler" class="burger" tabindex="0">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
               </label>
             </div>
           </nav>
+        </div>
+        <div class="home__nav-mobile js-home__nav-mobile">
+          <div class="nav__mobile">
+            <ul class="nav__mobile-list">
+              <li>
+                <a href="#home" class="nav__mobile-link link">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="nav__mobile-link link">About</a>
+              </li>
+              <li>
+                <a href="#services" class="nav__mobile-link link">Services</a>
+              </li>
+              <li>
+                <a href="#projects" class="nav__mobile-link link">Projects</a>
+              </li>
+              <li>
+                <a href="#news" class="nav__mobile-link link">News</a>
+              </li>
+              <li>
+                <a href="#testimonial" class="nav__mobile-link link">Testimonial</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <ul class="home__media">
           <li class="social-media__button">
@@ -375,7 +401,7 @@
         </div>
       </section>
 
-      <section id="article" class="news l-news">
+      <section id="news" class="news l-news">
         <div class="news__header">
           <div class="news__main">
             <h2 class="header__secondary">Latest News</h2>
@@ -618,7 +644,7 @@
         </div>
         <div class="contact__side">
           <div class="contact__video">
-            <div class="video video--full-height">
+            <div class="video vide-full-height">
               <svg class="video__play">
                 <use xlink:href="./assets/svg/sprite.svg#icon-play"></use>
               </svg>
@@ -665,7 +691,7 @@
                 <a href="#projects" class="link">Projects</a>
               </div>
               <div class="nav__link">
-                <a href="#article" class="link">Article</a>
+                <a href="#news" class="link">News</a>
               </div>
               <div class="nav__link">
                 <a href="#testimonial" class="link">Testimonial</a>
@@ -705,5 +731,8 @@
         </div>
       </footer>
     </div>
+
+    <script src="./js/mobileNavigation.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

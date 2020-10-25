@@ -1,0 +1,19 @@
+.blur {
+  position: fixed;
+  pointer-events: none;
+
+  @include z-index(blur);
+  opacity: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: f_color(main, secondary, 0.4);
+
+  transition: all 0.4s ease-in-out;
+
+  &__is-visible {
+    pointer-events: all;
+    opacity: 1;
+  }
+}

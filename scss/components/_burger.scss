@@ -3,8 +3,13 @@
   flex-direction: column;
   position: relative;
 
+  &:focus &-line,
   &:hover &-line {
     background-color: f_color(main, primary-dark);
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &-line {

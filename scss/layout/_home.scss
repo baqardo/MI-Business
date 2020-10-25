@@ -1,4 +1,6 @@
 .home {
+  position: relative;
+
   background-color: f_color(main, tertiary);
   background-image: url(../assets/svg/header-decoration.svg);
   background-size: contain;
@@ -26,9 +28,34 @@
   &__nav {
     padding-top: 5vh;
 
+    @include z-index(nav);
+
     @include respond($medium-bp) {
       padding-top: 10px;
     }
+
+    @include respond($small-bp) {
+      padding-top: 0;
+      height: 51px;
+    }
+  }
+
+  &__nav-mobile {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+
+    visibility: hidden;
+    @include z-index(nav-mobile);
+
+    transition: all 0.4s;
+
+    width: 320px;
+  }
+
+  &__nav-mobile-is-visible {
+    right: 0;
+    visibility: visible;
   }
 }
 
