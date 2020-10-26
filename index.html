@@ -411,8 +411,19 @@
             eat in over 200 cities around the world.
           </p>
         </div>
-        <ul class="news__content">
-          <li class="news__card">
+        <button class="js-news-prev news__slide news__slide--prev">
+          <svg class="news__arrow">
+            <use xlink:href="./assets/svg/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="js-news-next news__slide news__slide--next">
+          <svg class="news__arrow">
+            <use xlink:href="./assets/svg/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+
+        <ul class="js-news-container news__content">
+          <li class="js-news-card news__card">
             <div class="news__image-wrapper">
               <img src="/assets/img/startup.jpg" alt="news" class="news__image" loading="lazy" />
             </div>
@@ -434,7 +445,7 @@
               </div>
             </div>
           </li>
-          <li class="news__card">
+          <li class="js-news-card news__card">
             <div class="news__image-wrapper">
               <img src="/assets/img/startup.jpg" alt="news" class="news__image" loading="lazy" />
             </div>
@@ -456,7 +467,7 @@
               </div>
             </div>
           </li>
-          <li class="news__card">
+          <li class="js-news-card news__card js-current-card">
             <div class="news__image-wrapper">
               <img src="/assets/img/startup.jpg" alt="news" class="news__image" loading="lazy" />
             </div>
@@ -478,7 +489,7 @@
               </div>
             </div>
           </li>
-          <li class="news__card">
+          <li class="js-news-card news__card">
             <div class="news__image-wrapper">
               <img src="/assets/img/startup.jpg" alt="news" class="news__image" loading="lazy" />
             </div>
@@ -500,7 +511,7 @@
               </div>
             </div>
           </li>
-          <li class="news__card">
+          <li class="js-news-card news__card">
             <div class="news__image-wrapper">
               <img src="/assets/img/startup.jpg" alt="news" class="news__image" loading="lazy" />
             </div>
@@ -733,6 +744,7 @@
     </div>
 
     <script src="./js/mobileNavigation.js"></script>
+    <script src="./js/newsSlider.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

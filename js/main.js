@@ -1,1 +1,2 @@
-mobileNavHandler()
+mobileNavHandler();
+newsSliderHandler();
