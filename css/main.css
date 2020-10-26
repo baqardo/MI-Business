@@ -1132,6 +1132,7 @@ input:focus {
   background-color: #1268fe;
   background-size: cover;
   background-blend-mode: soft-light;
+  background-position: center;
 }
 .contact__form {
   padding: 5% 0;
