@@ -7,8 +7,6 @@ const mobileNavHandler = () => {
   const blur = document.querySelector('.js-blur');
   const burgerToggler = document.querySelector('.js-burger-toggler');
 
-  console.log(nav, mobileNav);
-
   burger.addEventListener('click', () => {
     if (isNavInvisible) {
       mobileNav.classList.add('home__nav-mobile-is-visible');

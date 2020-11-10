@@ -16,7 +16,7 @@
     <div class="l-page">
       <div class="blur js-blur"></div>
 
-      <header id="home" class="home l-home">
+      <header id="home" class="home l-home js-scroll">
         <div class="home__nav">
           <nav class="nav l-nav js-nav">
             <div class="nav__border"></div>
@@ -128,7 +128,7 @@
         </div>
       </header>
 
-      <section id="about" class="about l-about">
+      <section id="about" class="about l-about js-scroll">
         <div class="about__main-background"></div>
         <div class="about__side-background"></div>
         <div class="about__cta">
@@ -159,7 +159,7 @@
         </div>
       </section>
 
-      <section class="expertise l-expertise">
+      <section class="expertise l-expertise js-scroll">
         <div class="expertise__header">
           <div class="expertise__main">
             <h2 class="header__secondary">Our Expertises</h2>
@@ -232,7 +232,7 @@
         </div>
       </section>
 
-      <section id="services" class="services services--second l-services--second">
+      <section id="services" class="services services--second l-services--second js-scroll">
         <div class="services__cta">
           <div class="cta">
             <div class="cta__title">
@@ -254,7 +254,7 @@
         </div>
       </section>
 
-      <section class="services l-services">
+      <section class="services l-services js-scroll">
         <div class="services__side-background"></div>
         <div class="services__main-background"></div>
         <div class="services__boxes">
@@ -303,7 +303,7 @@
         </div>
       </section>
 
-      <section id="projects" class="projects l-projects">
+      <section id="projects" class="projects l-projects js-scroll">
         <div class="projects__item">
           <div class="projects__image-wrapper">
             <img class="projects__image" src="assets/img/coffee.jpg" alt="1 project" loading="lazy" />
@@ -402,7 +402,7 @@
         </div>
       </section>
 
-      <section id="news" class="news l-news">
+      <section id="news" class="news l-news js-scroll">
         <div class="news__header">
           <div class="news__main">
             <h2 class="header__secondary">Latest News</h2>
@@ -412,16 +412,18 @@
             eat in over 200 cities around the world.
           </p>
         </div>
-        <button class="js-news-prev news__slide news__slide--prev">
-          <svg class="news__arrow">
-            <use xlink:href="./assets/svg/sprite.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
-        <button class="js-news-next news__slide news__slide--next">
-          <svg class="news__arrow">
-            <use xlink:href="./assets/svg/sprite.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
+        <div class="news__buttons">
+          <button class="js-news-prev news__slide news__slide--prev">
+            <svg class="news__arrow">
+              <use xlink:href="./assets/svg/sprite.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="js-news-next news__slide news__slide--next">
+            <svg class="news__arrow">
+              <use xlink:href="./assets/svg/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
 
         <ul class="js-news-container news__content">
           <li class="js-news-card news__card">
@@ -537,7 +539,7 @@
         </ul>
       </section>
 
-      <section id="testimonial" class="testimonials l-testimonials">
+      <section id="testimonial" class="testimonials l-testimonials js-scroll">
         <div class="testimonials__content">
           <h2 class="header__secondary">What Customer Says</h2>
           <div class="testimonials__opinion">
@@ -565,7 +567,7 @@
         </div>
       </section>
 
-      <section class="pricing l-pricing">
+      <section class="pricing l-pricing js-scroll">
         <div class="pricing__header">
           <div class="pricing__main">
             <h2 class="header__secondary">Pricing Table</h2>
@@ -637,7 +639,7 @@
         </div>
       </section>
 
-      <section id="contact" class="contact l-contact">
+      <section id="contact" class="contact l-contact js-scroll">
         <div class="contact__main">
           <form action="#" class="contact__form">
             <h1 class="header__primary">Contact Us</h1>
@@ -665,7 +667,7 @@
         </div>
       </section>
 
-      <section class="testimonials testimonials--secondary l-testimonials">
+      <section class="testimonials testimonials--secondary l-testimonials js-scroll">
         <div class="testimonials__content">
           <div class="testimonials__cta">
             <div class="cta">
@@ -686,7 +688,7 @@
         </div>
       </section>
 
-      <footer class="footer">
+      <footer class="footer js-scroll">
         <div class="footer__links l-footer__links">
           <nav class="nav">
             <div class="nav__list nav__list--narrow">

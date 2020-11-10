@@ -31,6 +31,9 @@
   &__card {
     position: relative;
     left: 0;
+
+    overflow: hidden;
+
     padding: 15px;
     margin: 0 16px;
 
@@ -128,44 +131,35 @@
   }
 
   &__slide {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-    transition: all 0.4s;
-
     margin: 0 20px;
     padding: 0 5px;
     width: 65px;
-    height: 200px;
+    height: 125px;
 
     @include z-index(slide-btn);
 
+    transition: all 0.4s;
+
     &:hover,
     &:focus {
-      box-shadow: 0 0 8px f_color(main, secondary-black, 0.3);
-    }
-
-    @include respond($tiny-bp) {
-      display: none;
-    }
-
-    &--prev {
-      left: 0;
-    }
-
-    &--next {
-      right: 0;
+      box-shadow: 0 0 8px f_color(main, secondary-black, 0.15);
     }
   }
 
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__arrow {
-    width: 100%;
+    width: 80%;
+    height: 100%;
   }
 }
 
 .l-news {
   @include grid16;
+  grid-template-rows: min-content;
 
   .news__header {
     grid-column: 6 / 12;
@@ -184,8 +178,21 @@
     }
   }
 
+  .news__buttons {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    @include respond($tiny-bp) {
+      display: none;
+    }
+  }
+
   .news__content {
     grid-column: 1 / 17;
-    grid-row: 2;
+    grid-row: 3;
+
+    @include respond($tiny-bp) {
+      grid-row: 2;
+    }
   }
 }
