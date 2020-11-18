@@ -8,9 +8,10 @@ const smoothScroll = () => {
     if (!targetAnchor) return;
 
     event.preventDefault();
-    gsap.to(window, {
-      duration: 1.5,
-      scrollTo: targetAnchor.href.substring(targetAnchor.href.lastIndexOf("#")),
-    });
+
+    const targetSection = targetAnchor.href.substring(targetAnchor.href.lastIndexOf("#"));
+    if (targetSection.length < 2) return;
+
+    gsap.to(window, { duration: 1.5, scrollTo: targetSection });
   });
 };

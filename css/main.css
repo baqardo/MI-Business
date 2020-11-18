@@ -731,12 +731,27 @@ input:focus {
 }
 .projects__image {
   width: 100%;
+  min-height: 100%;
   object-fit: cover;
+}
+.projects__image-wrapper {
+  height: 100%;
 }
 
 .l-projects {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
+  min-height: 66.6666666667vw;
+}
+@media only screen and (max-width: 800px) {
+  .l-projects {
+    min-height: 150vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .l-projects {
+    min-height: 600vw;
+  }
 }
 .l-projects .projects__item {
   grid-column: span 6;

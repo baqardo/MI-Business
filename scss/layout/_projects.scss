@@ -50,13 +50,27 @@
 
   &__image {
     width: 100%;
+    min-height: 100%;
 
     object-fit: cover;
+
+    &-wrapper {
+      height: 100%;
+    }
   }
 }
 
 .l-projects {
   @include grid18;
+  min-height: 100vw/3 * 2;
+
+  @include respond($small-bp) {
+    min-height: 100vw/2 * 3;
+  }
+
+  @include respond($tiny-bp) {
+    min-height: 100vw * 6;
+  }
 
   .projects__item {
     grid-column: span 6;
