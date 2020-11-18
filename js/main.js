@@ -1,2 +1,3 @@
 mobileNavHandler();
 newsSliderHandler();
+smoothScroll();

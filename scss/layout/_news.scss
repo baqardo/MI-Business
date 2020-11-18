@@ -181,6 +181,7 @@
   .news__buttons {
     grid-column: 1 / -1;
     grid-row: 2;
+    align-self: end;
 
     @include respond($tiny-bp) {
       display: none;

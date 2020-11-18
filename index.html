@@ -11,12 +11,14 @@
       rel="stylesheet"
     />
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
   </head>
   <body>
     <div class="l-page">
       <div class="blur js-blur"></div>
 
-      <header id="home" class="home l-home js-scroll">
+      <header id="home" class="home l-home">
         <div class="home__nav">
           <nav class="nav l-nav js-nav">
             <div class="nav__border"></div>
@@ -25,26 +27,26 @@
             </div>
             <ul class="nav__list">
               <li class="nav__link">
-                <a href="#home" class="link">Home</a>
+                <a href="#home" class="link js-anchor">Home</a>
               </li>
               <li class="nav__link">
-                <a href="#about" class="link">About</a>
+                <a href="#about" class="link js-anchor">About</a>
               </li>
               <li class="nav__link">
-                <a href="#services" class="link">Services</a>
+                <a href="#services" class="link js-anchor">Services</a>
               </li>
               <li class="nav__link">
-                <a href="#projects" class="link">Projects</a>
+                <a href="#projects" class="link js-anchor">Projects</a>
               </li>
               <li class="nav__link">
-                <a href="#news" class="link">News</a>
+                <a href="#news" class="link js-anchor">News</a>
               </li>
               <li class="nav__link">
-                <a href="#testimonial" class="link">Testimonial</a>
+                <a href="#testimonial" class="link js-anchor">Testimonial</a>
               </li>
             </ul>
             <div class="nav__btn">
-              <a href="#contact" class="btn btn--primary btn--link link">Contact</a>
+              <a href="#contact" class="btn btn--primary btn--link link js-anchor">Contact</a>
             </div>
             <div class="nav__burger">
               <input type="checkbox" id="burger-toggler" class="js-burger-toggler burger-toggler" />
@@ -60,43 +62,43 @@
           <div class="nav__mobile">
             <ul class="nav__mobile-list">
               <li>
-                <a href="#home" class="nav__mobile-link link">Home</a>
+                <a href="#home" class="nav__mobile-link link js-anchor">Home</a>
               </li>
               <li>
-                <a href="#about" class="nav__mobile-link link">About</a>
+                <a href="#about" class="nav__mobile-link link js-anchor">About</a>
               </li>
               <li>
-                <a href="#services" class="nav__mobile-link link">Services</a>
+                <a href="#services" class="nav__mobile-link link js-anchor">Services</a>
               </li>
               <li>
-                <a href="#projects" class="nav__mobile-link link">Projects</a>
+                <a href="#projects" class="nav__mobile-link link js-anchor">Projects</a>
               </li>
               <li>
-                <a href="#news" class="nav__mobile-link link">News</a>
+                <a href="#news" class="nav__mobile-link link js-anchor">News</a>
               </li>
               <li>
-                <a href="#testimonial" class="nav__mobile-link link">Testimonial</a>
+                <a href="#testimonial" class="nav__mobile-link link js-anchor">Testimonial</a>
               </li>
             </ul>
           </div>
         </div>
         <ul class="home__media">
           <li class="social-media__button">
-            <a href="#" class="btn btn--round btn--tertiary">
+            <a href="#" class="btn btn--round btn--tertiary js-anchor">
               <svg class="social-media__icon">
                 <use xlink:href="./assets/svg/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social-media__button">
-            <a href="#" class="btn btn--round btn--secondary">
+            <a href="#" class="btn btn--round btn--secondary js-anchor">
               <svg class="social-media__icon">
                 <use xlink:href="./assets/svg/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social-media__button">
-            <a href="#" class="btn btn--round btn--tertiary">
+            <a href="#" class="btn btn--round btn--tertiary js-anchor">
               <svg class="social-media__icon">
                 <use xlink:href="./assets/svg/sprite.svg#icon-instagram"></use>
               </svg>
@@ -115,7 +117,7 @@
               </p>
             </div>
             <div class="cta__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary"> Work with us </a>
+              <a href="#contact" class="btn btn--rounded btn--secondary js-anchor"> Work with us </a>
             </div>
           </div>
         </div>
@@ -128,7 +130,7 @@
         </div>
       </header>
 
-      <section id="about" class="about l-about js-scroll">
+      <section id="about" class="about l-about">
         <div class="about__main-background"></div>
         <div class="about__side-background"></div>
         <div class="about__cta">
@@ -143,7 +145,7 @@
               </p>
             </div>
             <div class="cta__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary">find out more</a>
+              <a href="#contact" class="btn btn--rounded btn--secondary js-anchor">find out more</a>
             </div>
           </div>
         </div>
@@ -159,7 +161,7 @@
         </div>
       </section>
 
-      <section class="expertise l-expertise js-scroll">
+      <section class="expertise l-expertise">
         <div class="expertise__header">
           <div class="expertise__main">
             <h2 class="header__secondary">Our Expertises</h2>
@@ -188,7 +190,7 @@
               </div>
             </div>
             <div class="expertise__btn">
-              <a href="#contact" class="btn btn--rounded btn--tertiary">Find out more</a>
+              <a href="#contact" class="btn btn--rounded btn--tertiary js-anchor">Find out more</a>
             </div>
           </div>
           <div class="expertise__column">
@@ -207,7 +209,7 @@
               </div>
             </div>
             <div class="expertise__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary">Find out more</a>
+              <a href="#contact" class="btn btn--rounded btn--secondary js-anchor">Find out more</a>
             </div>
           </div>
           <div class="expertise__column">
@@ -226,13 +228,13 @@
               </div>
             </div>
             <div class="expertise__btn">
-              <a href="#contact" class="btn btn--rounded btn--tertiary">Find out more</a>
+              <a href="#contact" class="btn btn--rounded btn--tertiary js-anchor">Find out more</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="services" class="services services--second l-services--second js-scroll">
+      <section id="services" class="services services--second l-services--second">
         <div class="services__cta">
           <div class="cta">
             <div class="cta__title">
@@ -245,7 +247,7 @@
               </p>
             </div>
             <div class="cta__btn">
-              <a href="#contact" class="btn btn--rounded btn--transparent">find out more</a>
+              <a href="#contact" class="btn btn--rounded btn--transparent js-anchor">find out more</a>
             </div>
           </div>
         </div>
@@ -254,7 +256,7 @@
         </div>
       </section>
 
-      <section class="services l-services js-scroll">
+      <section class="services l-services">
         <div class="services__side-background"></div>
         <div class="services__main-background"></div>
         <div class="services__boxes">
@@ -297,13 +299,13 @@
               </p>
             </div>
             <div class="cta__btn">
-              <a href="#contact" class="btn btn--rounded btn--transparent">find out more</a>
+              <a href="#contact" class="btn btn--rounded btn--transparent js-anchor">find out more</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="projects l-projects js-scroll">
+      <section id="projects" class="projects l-projects">
         <div class="projects__item">
           <div class="projects__image-wrapper">
             <img class="projects__image" src="assets/img/coffee.jpg" alt="1 project" loading="lazy" />
@@ -402,7 +404,7 @@
         </div>
       </section>
 
-      <section id="news" class="news l-news js-scroll">
+      <section id="news" class="news l-news">
         <div class="news__header">
           <div class="news__main">
             <h2 class="header__secondary">Latest News</h2>
@@ -539,7 +541,7 @@
         </ul>
       </section>
 
-      <section id="testimonial" class="testimonials l-testimonials js-scroll">
+      <section id="testimonial" class="testimonials l-testimonials">
         <div class="testimonials__content">
           <h2 class="header__secondary">What Customer Says</h2>
           <div class="testimonials__opinion">
@@ -567,7 +569,7 @@
         </div>
       </section>
 
-      <section class="pricing l-pricing js-scroll">
+      <section class="pricing l-pricing">
         <div class="pricing__header">
           <div class="pricing__main">
             <h2 class="header__secondary">Pricing Table</h2>
@@ -597,7 +599,7 @@
               <div class="pricing__benefit"><p class="text__tertiary">Basic search</p></div>
             </div>
             <div class="pricing__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
+              <a href="#contact" class="btn btn--rounded btn--secondary js-anchor">Get Started</a>
             </div>
           </div>
           <div class="pricing__column">
@@ -615,7 +617,7 @@
               <div class="pricing__benefit"><p class="text__tertiary">Basic search</p></div>
             </div>
             <div class="pricing__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
+              <a href="#contact" class="btn btn--rounded btn--secondary js-anchor">Get Started</a>
             </div>
           </div>
           <div class="pricing__column">
@@ -633,13 +635,13 @@
               <div class="pricing__benefit"><p class="text__tertiary">Basic dashboards</p></div>
             </div>
             <div class="pricing__btn">
-              <a href="#contact" class="btn btn--rounded btn--secondary">Get Started</a>
+              <a href="#contact" class="btn btn--rounded btn--secondary js-anchor">Get Started</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact l-contact js-scroll">
+      <section id="contact" class="contact l-contact">
         <div class="contact__main">
           <form action="#" class="contact__form">
             <h1 class="header__primary">Contact Us</h1>
@@ -652,7 +654,7 @@
             <input name="name" type="text" class="contact__input" placeholder="Your Name" />
             <input name="email" type="email" class="contact__input" placeholder="Your Email" />
             <div class="contact__btn">
-              <a href="index.html" class="btn btn--rounded btn--secondary btn--full-width">Work With Us</a>
+              <a href="index.html" class="btn btn--rounded btn--secondary btn--full-width js-anchor">Work With Us</a>
             </div>
           </form>
         </div>
@@ -667,7 +669,7 @@
         </div>
       </section>
 
-      <section class="testimonials testimonials--secondary l-testimonials js-scroll">
+      <section class="testimonials testimonials--secondary l-testimonials">
         <div class="testimonials__content">
           <div class="testimonials__cta">
             <div class="cta">
@@ -681,52 +683,52 @@
                 </p>
               </div>
               <div class="cta__btn cta__btn--center">
-                <a href="#contact" class="btn btn--rounded btn--primary">Work with us</a>
+                <a href="#contact" class="btn btn--rounded btn--primary js-anchor">Work with us</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer class="footer js-scroll">
+      <footer class="footer">
         <div class="footer__links l-footer__links">
           <nav class="nav">
             <div class="nav__list nav__list--narrow">
               <div class="nav__link">
-                <a href="#home" class="link">Home</a>
+                <a href="#home" class="link js-anchor">Home</a>
               </div>
               <div class="nav__link">
-                <a href="#about" class="link">About</a>
+                <a href="#about" class="link js-anchor">About</a>
               </div>
               <div class="nav__link">
-                <a href="#services" class="link">Services</a>
+                <a href="#services" class="link js-anchor">Services</a>
               </div>
               <div class="nav__link">
-                <a href="#projects" class="link">Projects</a>
+                <a href="#projects" class="link js-anchor">Projects</a>
               </div>
               <div class="nav__link">
-                <a href="#news" class="link">News</a>
+                <a href="#news" class="link js-anchor">News</a>
               </div>
               <div class="nav__link">
-                <a href="#testimonial" class="link">Testimonial</a>
+                <a href="#testimonial" class="link js-anchor">Testimonial</a>
               </div>
               <div class="nav__link">
-                <a href="#contact" class="link">Contact</a>
+                <a href="#contact" class="link js-anchor">Contact</a>
               </div>
             </div>
           </nav>
           <div class="footer__media">
-            <a href="#" class="social-media__link">
+            <a href="#" class="social-media__link js-anchor">
               <svg class="social-media__icon">
                 <use xlink:href="./assets/svg/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
-            <a href="#" class="social-media__link">
+            <a href="#" class="social-media__link js-anchor">
               <svg class="social-media__icon">
                 <use xlink:href="./assets/svg/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
-            <a href="#" class="social-media__link">
+            <a href="#" class="social-media__link js-anchor">
               <svg class="social-media__icon">
                 <use xlink:href="./assets/svg/sprite.svg#icon-instagram"></use>
               </svg>
@@ -748,6 +750,7 @@
 
     <script src="./js/mobileNavigation.js"></script>
     <script src="./js/newsSlider.js"></script>
+    <script src="./js/smoothScroll.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

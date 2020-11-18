@@ -903,6 +903,7 @@ input:focus {
 .l-news .news__buttons {
   grid-column: 1/-1;
   grid-row: 2;
+  align-self: end;
 }
 @media only screen and (max-width: 600px) {
   .l-news .news__buttons {
