@@ -130,5 +130,10 @@
             <path d="M3.828 9l6.071-6.071-1.414-1.414-8.485 8.485 8.485 8.485 1.414-1.414-6.071-6.071h16.172v-2h-16.172z"></path>
         </symbol>
 
+        <symbol id="icon-plus" viewBox="0 0 16 16">
+            <path d="M7.66687 0.5V14.5" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0.670532 7.5H14.6632" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
     </defs>
 </svg>

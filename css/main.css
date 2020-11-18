@@ -198,7 +198,7 @@ input:focus {
 .home {
   position: relative;
   background-color: white;
-  background-image: url(../assets/svg/header-decoration.svg);
+  background-image: url(../assets/svg/sprite-decorations.svg#icon-home);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 100% center;
@@ -304,7 +304,7 @@ input:focus {
 }
 .about__side-background {
   background-color: white;
-  background-image: url(../assets/svg/intro-decoration.svg);
+  background-image: url(../assets/svg/sprite-decorations.svg#icon-about);
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -319,18 +319,21 @@ input:focus {
   font-weight: 900;
 }
 .about__plus {
+  width: 60%;
+  height: 60%;
+}
+.about__plus-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: -25px;
-  right: -25px;
+  right: -28px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
   background-color: white;
-  background-image: url(../assets/svg/plus.svg);
-  background-repeat: no-repeat;
-  background-size: 40%;
-  background-position: 50% 50%;
-  width: 55px;
-  height: 55px;
 }
 .about__image {
   width: 100%;
@@ -500,16 +503,26 @@ input:focus {
 }
 .services--second {
   background-color: #0f1120;
-  background-image: url(../assets/img/man-reading.jpg);
-  background-size: cover;
+  background-image: url(../assets/img/man-reading.jpg), url(../assets/svg/sprite-decorations.svg#icon-second-services);
+  background-size: cover, 70%;
+  background-position: 0 0, 120%;
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
   align-items: center;
 }
+@media only screen and (max-width: 1023px) {
+  .services--second {
+    background-image: url(../assets/img/man-reading.jpg);
+    background-size: cover;
+    background-position: 0 0;
+  }
+}
 .services__main-background {
   background-color: #0f1120;
-  background-image: url(../assets/svg/services-decoration.svg);
-  background-size: cover;
+  background-image: url(../assets/svg/sprite-decorations.svg#icon-first-services);
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .services__side-background {
   background-image: url(../assets/img/workspace.jpg);
@@ -944,7 +957,7 @@ input:focus {
 }
 .testimonials--secondary {
   background-color: rgba(15, 17, 32, 0.8);
-  background-image: url(../assets/img/white-suit.jpg), url(../assets/svg/testimonials-decoration.svg);
+  background-image: url(../assets/img/white-suit.jpg), url(../assets/svg/sprite-decorations.svg#icon-testimonials);
   background-size: cover, 50%;
   background-position: top, center;
   background-repeat: no-repeat;
@@ -1623,5 +1636,3 @@ input:focus {
   width: 100%;
   padding-bottom: 56.25%;
 }
-
-/*# sourceMappingURL=main.css.map */

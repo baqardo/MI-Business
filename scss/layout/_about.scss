@@ -10,7 +10,7 @@
 
   &__side-background {
     background-color: f_color(main, tertiary);
-    background-image: url(../assets/svg/intro-decoration.svg);
+    background-image: url(../assets/svg/sprite-decorations.svg#icon-about);
     background-size: 100%;
     background-repeat: no-repeat;
   }
@@ -30,21 +30,22 @@
   }
 
   &__plus {
-    position: absolute;
-    top: -25px;
-    right: -25px;
+    width: 60%;
+    height: 60%;
 
-    border-radius: 50%;
-    box-shadow: 0 0 40px f_color(main, secondary-black, 0.1);
-
-    background-color: f_color(main, tertiary);
-    background-image: url(../assets/svg/plus.svg);
-    background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: 50% 50%;
-
-    width: 55px;
-    height: 55px;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -25px;
+      right: -28px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 0 40px f_color(main, secondary-black, 0.1);
+      background-color: f_color(main, tertiary);
+    }
   }
 
   &__image {

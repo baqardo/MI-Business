@@ -3,18 +3,27 @@
 
   &--second {
     background-color: f_color(main, secondary);
-    background-image: url(../assets/img/man-reading.jpg);
-    background-size: cover;
+    background-image: url(../assets/img/man-reading.jpg), url(../assets/svg/sprite-decorations.svg#icon-second-services);
+    background-size: cover, 70%;
+    background-position: 0 0, 120%;
     background-repeat: no-repeat;
     background-blend-mode: soft-light;
 
     align-items: center;
+
+    @include respond($medium-bp) {
+      background-image: url(../assets/img/man-reading.jpg);
+      background-size: cover;
+      background-position: 0 0;
+    }
   }
 
   &__main-background {
     background-color: f_color(main, secondary);
-    background-image: url(../assets/svg/services-decoration.svg);
-    background-size: cover;
+    background-image: url(../assets/svg/sprite-decorations.svg#icon-first-services);
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
 
   &__side-background {

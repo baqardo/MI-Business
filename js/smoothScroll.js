@@ -12,6 +12,6 @@ const smoothScroll = () => {
     const targetSection = targetAnchor.href.substring(targetAnchor.href.lastIndexOf("#"));
     if (targetSection.length < 2) return;
 
-    gsap.to(window, { duration: 1.5, scrollTo: targetSection });
+    gsap.to(window, { duration: 1.5, scrollTo: targetSection, ease: "power2.inOut" });
   });
 };
