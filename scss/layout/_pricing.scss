@@ -1,5 +1,5 @@
 .pricing {
-  padding-top: 4%;
+  padding-top: max(60px, 5%);
   padding-bottom: 8%;
 
   min-height: 100%;
@@ -110,6 +110,8 @@
 
   &__btn {
     margin-top: 10px;
+
+    min-width: 200px;
   }
 }
 

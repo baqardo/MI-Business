@@ -9,6 +9,10 @@
     cursor: pointer;
   }
 
+  &__item:hover &__tap {
+    display: none;
+  }
+
   &__content {
     @include flex-center;
     flex-direction: column;
@@ -58,6 +62,33 @@
       height: 100%;
     }
   }
+
+  &__tap {
+    display: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: f_color(font, tertiary);
+    text-shadow: 0 0 3px f_color(font, secondary, 0.8);
+
+    @include respond($tiny-bp) {
+      @include flex-center;
+      flex-direction: column;
+    }
+
+    &-icon {
+      margin-bottom: 20px;
+
+      width: 60%;
+      height: 60%;
+
+      fill: f_color(main, tertiary);
+      filter: drop-shadow(0 0 2px f_color(main, secondary, 0.5));
+    }
+  }
 }
 
 .l-projects {
@@ -81,6 +112,8 @@
 
     @include respond($tiny-bp) {
       grid-column: span 18;
+
+      min-height: 100vw;
     }
   }
 }

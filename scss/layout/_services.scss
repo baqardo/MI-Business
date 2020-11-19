@@ -34,7 +34,7 @@
   }
 
   &__cta {
-    padding: 5% 0;
+    padding: max(60px, 5%) 0;
 
     &--right {
       margin-left: 30px;
@@ -115,6 +115,13 @@
   &__phone {
     &-image {
       width: 100%;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    @include respond($tiny-bp) {
+      display: none;
     }
   }
 }

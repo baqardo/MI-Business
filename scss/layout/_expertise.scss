@@ -1,5 +1,5 @@
 .expertise {
-  padding: 5% 0;
+  padding: max(60px, 5%) 0;
 
   min-height: 100%;
 
@@ -53,6 +53,8 @@
   &__title {
     margin-top: 50px;
 
+    min-width: 100px;
+
     @include respond($small-bp) {
       margin-top: 20px;
     }
@@ -67,6 +69,10 @@
     @include respond($small-bp) {
       margin-bottom: 20px;
     }
+  }
+
+  &__btn {
+    min-width: 200px;
   }
 }
 

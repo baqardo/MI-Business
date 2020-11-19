@@ -6,10 +6,6 @@
     opacity: 1;
   }
 }
-html {
-  scroll-behavior: smooth;
-}
-
 *,
 *::before,
 *::after {
@@ -309,7 +305,7 @@ input:focus {
   background-repeat: no-repeat;
 }
 .about__cta {
-  padding: 5% 0;
+  padding: max(60px, 5%) 0;
 }
 .about__caption {
   position: absolute;
@@ -393,7 +389,7 @@ input:focus {
 }
 
 .expertise {
-  padding: 5% 0;
+  padding: max(60px, 5%) 0;
   min-height: 100%;
   text-align: center;
 }
@@ -443,6 +439,7 @@ input:focus {
 }
 .expertise__title {
   margin-top: 50px;
+  min-width: 100px;
 }
 @media only screen and (max-width: 800px) {
   .expertise__title {
@@ -458,6 +455,9 @@ input:focus {
   .expertise__text {
     margin-bottom: 20px;
   }
+}
+.expertise__btn {
+  min-width: 200px;
 }
 
 .l-expertise {
@@ -531,7 +531,7 @@ input:focus {
   background-repeat: no-repeat;
 }
 .services__cta {
-  padding: 5% 0;
+  padding: max(60px, 5%) 0;
 }
 .services__cta--right {
   margin-left: 30px;
@@ -601,6 +601,14 @@ input:focus {
 }
 .services__phone-image {
   width: 100%;
+}
+.services__btn {
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .services__btn {
+    display: none;
+  }
 }
 
 .l-services {
@@ -708,6 +716,9 @@ input:focus {
   opacity: 1;
   cursor: pointer;
 }
+.projects__item:hover .projects__tap {
+  display: none;
+}
 .projects__content {
   display: flex;
   align-items: center;
@@ -750,6 +761,30 @@ input:focus {
 .projects__image-wrapper {
   height: 100%;
 }
+.projects__tap {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0 0 3px rgba(15, 17, 32, 0.8);
+}
+@media only screen and (max-width: 600px) {
+  .projects__tap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.projects__tap-icon {
+  margin-bottom: 20px;
+  width: 60%;
+  height: 60%;
+  fill: white;
+  filter: drop-shadow(0 0 2px rgba(15, 17, 32, 0.5));
+}
 
 .l-projects {
   display: grid;
@@ -777,6 +812,7 @@ input:focus {
 @media only screen and (max-width: 600px) {
   .l-projects .projects__item {
     grid-column: span 18;
+    min-height: 100vw;
   }
 }
 
@@ -958,17 +994,24 @@ input:focus {
 .testimonials--secondary {
   background-color: rgba(15, 17, 32, 0.8);
   background-image: url(../assets/img/white-suit.jpg), url(../assets/svg/sprite-decorations.svg#icon-testimonials);
-  background-size: cover, 50%;
+  background-size: cover, 70%;
   background-position: top, center;
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
+}
+@media only screen and (max-width: 600px) {
+  .testimonials--secondary {
+    background-image: url(../assets/img/white-suit.jpg);
+    background-size: cover;
+    background-position: top;
+  }
 }
 .testimonials__content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 5% 0;
+  padding: max(60px, 5%) 0;
   color: white;
   text-align: center;
 }
@@ -1021,7 +1064,7 @@ input:focus {
 }
 
 .pricing {
-  padding-top: 4%;
+  padding-top: max(60px, 5%);
   padding-bottom: 8%;
   min-height: 100%;
   text-align: center;
@@ -1116,6 +1159,7 @@ input:focus {
 }
 .pricing__btn {
   margin-top: 10px;
+  min-width: 200px;
 }
 
 .l-pricing {
@@ -1175,7 +1219,7 @@ input:focus {
   background-position: center;
 }
 .contact__form {
-  padding: 5% 0;
+  padding: max(60px, 5%) 0;
   width: 60%;
 }
 @media only screen and (max-width: 800px) {

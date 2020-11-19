@@ -9,17 +9,23 @@
   &--secondary {
     background-color: f_color(main, secondary, 0.8);
     background-image: url(../assets/img/white-suit.jpg), url(../assets/svg/sprite-decorations.svg#icon-testimonials);
-    background-size: cover, 50%;
+    background-size: cover, 70%;
     background-position: top, center;
     background-repeat: no-repeat;
     background-blend-mode: soft-light;
+
+    @include respond($tiny-bp) {
+      background-image: url(../assets/img/white-suit.jpg);
+      background-size: cover;
+      background-position: top;
+    }
   }
 
   &__content {
     @include flex-center;
     flex-direction: column;
 
-    padding: 5% 0;
+    padding: max(60px, 5%) 0;
 
     color: f_color(font, tertiary);
     text-align: center;
